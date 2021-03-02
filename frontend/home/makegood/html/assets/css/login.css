@@ -1,0 +1,268 @@
+#container {
+  display: table;
+  max-width: 640px;
+  width: 100%;
+}
+#login {
+  width: 640px;
+  padding: 0 15px;
+  height: 100%;
+  margin: 0 auto;
+  display: table-cell;
+  vertical-align: middle;
+}
+#login > h2 {
+  text-align: center;
+  font-size: 45px;
+  color: #54fe54;
+  font-weight: normal;
+}
+.login-box {
+  margin: 5% 0 0;
+  padding: 20px 30px 40px;
+  border: 1px solid #54fe54;
+}
+.login-box .id,
+.login-box .password  {
+  position: relative;
+  margin: 30px 0 10px;
+}
+.login-box .login-find {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 17px;
+  color: #000;
+  background: #a1a1a1;
+  width: 125px;
+  height: 47px;
+  text-align: center;
+  line-height: 46px;
+}
+.input-line {
+  position: relative;
+  margin: auto;
+  width: 100%;
+  padding: 12px 0 1px;
+  display: block;
+}
+.input-line input {
+  -webkit-appearance: none;
+  width: 100%;
+  border: 0;
+  font-family: 'nanumsquare';
+  height: 35px;
+  font-size: 20px;
+  font-weight: 500;
+  background: none;
+  border-radius: 0;
+  color: #fff;
+  border-bottom: 2px solid #a1a1a1;
+}
+.input-line input:focus {
+  border-bottom: 2px solid #fff;
+}
+.input-line input[type='password'] {
+  font-family: 'DungGeunMo';
+  color: #fff;
+}
+.input-line input::-webkit-input-placeholder {
+  color:#999999;
+  font-family: 'nanumsquare';
+}
+.input-line input:-moz-placeholder {
+  color:#999999;
+  opacity:1;
+  font-family: 'nanumsquare';
+}
+.input-line input::-moz-placeholder {
+  color:#999999;
+  opacity:1;
+  font-family: 'nanumsquare';
+}
+.input-line input:-ms-input-placeholder {
+  color:#999999;
+  font-family: 'nanumsquare';
+}
+
+.loginBtn {
+  margin: 30px auto 5px;
+  cursor: default;
+}
+.loginBtn.green-btn {
+  cursor: pointer;
+}
+
+.join-btn {
+  display: block;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-position: right 53%;
+  background-size: auto 18px;
+  font-size: 20px;
+  font-weight: 600;
+  width: 130px;
+  margin: 30px auto 0;
+}
+
+.pop-scroll {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.pop-bg {
+  position: fixed;
+  background: #000;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  opacity: 0.85;
+  z-index: 999;
+  display: none;
+}
+.loginPop .pop-title + p {
+  font-size: 18px;
+  letter-spacing: -1px;
+  padding-top: 10px;
+  margin-bottom: 30px;
+  font-family: 'nanumsquare';
+  text-align: center;
+  color: #a1a1a1;
+}
+.loginPop .input-line {
+  margin-top: 25px;
+}    
+.loginPop input[type="text"] {
+  font-size: 20px;
+}
+.loginPop .btn {
+  font-family: inherit;
+  font-size: 22px;
+  height: 57px;
+  margin-top: 55px;
+  cursor: default;
+  width: 100%;
+}
+.loginPop .btn.on {
+  background: #54fe54;
+  cursor: pointer;
+}
+
+.footerPop {
+  display: none;
+  position: fixed;
+  max-width: 470px;
+  background: #000;
+  padding: 30px 35px 40px;
+  z-index: 1000;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 90%;
+  border: 1px solid #54fe54;
+}
+.footerPop .close { 
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #a1a1a1;
+  padding: 15px;
+}
+.footerPop .close img {
+  width: 20px;
+}
+.footerPop .pop-title {
+  text-align: center;
+    font-size: 28px;
+    font-weight: 500;
+    border-bottom: 1px solid #a1a1a1;
+    padding: 15px 0 35px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+.footerPop input[type="text"] {
+  font-size: 23px;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #fff;
+}
+.footerPop input[type=text]::-webkit-input-placeholder {
+  color:#999;
+}
+.footerPop input[type=text]:-moz-placeholder {
+  color:#999;
+  opacity:1;
+}
+.footerPop input[type=text]::-moz-placeholder {
+  color:#999;
+  opacity:1;
+}
+.footerPop input[type=text]:-ms-input-placeholder {
+  color:#999;
+}
+
+
+@media (max-width:1024px) {
+  #container {
+    width:100%;
+    padding: 110px 15px;
+  }
+}
+@media (max-width:640px) {
+  #login {
+    width: 100%;
+  }
+  #login > h2 {
+    font-size: 30px;
+  }
+  .input-line input {
+    font-size: 16px;
+  }
+  .login-box .login-find {
+    top: 5px;
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+  }
+  .btn-area a {
+    font-size: 17px;
+  }
+  .footerPop .pop-title {
+    font-size: 22px;
+    padding: 15px 0 20px;
+  }
+  .loginPop .pop-title + p {
+    font-size: 14px;
+  }
+  .footerPop input[type="text"] {
+    font-size: 16px;
+  }
+  .loginPop .btn {
+    font-size: 18px;
+    height: 50px;
+    margin-top: 25px;
+  }
+}
+@media (max-width:480px) {
+  .input-line input {
+    font-size: 13px;
+  }
+  .login-box .login-find {
+    top: 10px;
+    width: 90px;
+    height: 35px;
+    line-height: 35px;
+    font-size: 12px;
+  }
+  .footerPop .pop-title {
+    font-size: 18px;
+  }
+  .footerPop input[type="text"] {
+    font-size: 13px;
+  }
+}

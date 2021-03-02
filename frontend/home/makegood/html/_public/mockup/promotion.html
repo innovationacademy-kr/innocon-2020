@@ -1,0 +1,128 @@
+<!--HEAD
+    {
+        "title": "이노베이션"
+        ,"meta": [
+            {"property": "og:description",  "content":"이노베이션"}
+        ]
+    }
+HEAD-->
+<link rel="stylesheet" type="text/css" href="/assets/css/promotion.css" />
+{% include 'client/kr/components/header.html' %}
+{% include 'client/kr/components/drawer-menu.html' %}
+
+<div id="container">
+    <div class="title-top">
+        <div class="title-top-bn">
+            <h2>2020<br>inno-<em>con</em></h2>
+            <p>2020이노베이션아카데미컨퍼런스<br><span class="sub">: CHANGE THE WORLD WITH SOFTWARE</span></p>
+            <div class="bg"><img src="/assets/images/introduce/top_banner_img_06.svg" alt="이노베이션 아카데미 소개" class="program-top-bn-img"></div> <!-- 20201126 수정 -->
+        </div>
+    </div>
+    <!--20201126 모바일 버전으로 이미지 추가-->
+    <div class="mob-top-img">
+        <img src="/assets/images/introduce/top_banner_img_06.svg" alt="이노베이션 아카데미 소개" class="mob-program-top-bn-img">
+    </div>
+    <!--20201126 모바일 버전으로 이미지 추가 끝-->
+    <ul class="top-tab grid2 tab-3"><!--20201126 클래스 추가-->
+        <li><a href="introduce">아카데미 소개</a></li>
+        <li><a href="42seoul">42 SEOUL 지원하기</a></li>
+        <li  class="active"><a href="promotion">홍보영상</a></li>
+    </ul>
+
+    <div id="contents">
+{#        <div class="title-img">#}
+{#            <img src="/assets/images/main/2020inno-con_banner.png" class="p-img">#}
+{#            <img src="/assets/images/main/m_2020inno-con_banner.png" class="m-img">#}
+{#        </div>#}
+        <div class="innocon02">
+            <div class="promotion-content">
+                <ul>
+                    <li>
+                        <a target="_blank" href="https://www.youtube.com/watch?v=gaYODx3_7VM">
+                  <span class="promo-img">
+                    <img src="/assets/images/promotion/promotion-img-play01.PNG" class="p-img">
+                  </span>
+                        </a>
+                <span class="promo-sub-title">
+                  <em>[Interview]</em>
+                  이노베이션 아카데미 이민석 초대 학장
+                </span>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.youtube.com/watch?v=w07O-Msjx3k">
+                  <span class="promo-img">
+                    <img src="/assets/images/promotion/promotion-img-play02.png" class="p-img">
+                  </span>
+                        </a>
+                <span class="promo-sub-title">
+                  <em>[42 SEOUL]</em>
+                  첫번째 라피신, 치열했던 4주간의 기록,<br>
+                  LIFE IS FORTY-TWO학장 
+                </span>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.youtube.com/watch?v=Olw6zi779PY">
+                  <span class="promo-img">
+                    <img src="/assets/images/promotion/promotion-img-play03.png" class="p-img">
+                  </span>
+                        </a>
+                <span class="promo-sub-title">
+                  <em>[42 SEOUL]</em>
+                  EP.1 첫번째 집중교육(라피신)<br> 
+                  4주간의 기록, 밀착 영상
+                </span>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.youtube.com/watch?v=tYB6cUxJG-s">
+                  <span class="promo-img">
+                    <img src="/assets/images/promotion/promotion-img-play04.png" class="p-img">
+                  </span>
+                        </a>
+                <span class="promo-sub-title">
+                  <em>[42 SEOUL]</em>
+                  EP.2 첫번째 집중교육(라피신)<br> 
+                  4주간의 기록, 밀착 영상
+                </span>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://youtu.be/2gE07GStEIk">
+                  <span class="promo-img">
+                    <img src="/assets/images/promotion/promotion-img-play05.png" class="p-img">
+                  </span>
+                        </a>
+                <span class="promo-sub-title">
+                  <em>[42 SEOUL]</em>
+                  GUIDE 영상 l 선발 과정, 커리큘럼, 교육생 혜택 안내
+                </span>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.youtube.com/watch?v=Or5W6I_cR2k"><!-- 20201205 김소라 수정 -->
+                  <span class="promo-img">
+                    <img src="/assets/images/promotion/promotion-img-play06.png" class="p-img">
+                  </span>
+                        </a>
+                <span class="promo-sub-title">
+                  <em>[42 SEOUL]</em><!-- 20201205 김소라 수정 -->
+                  학장에게 묻고, 답하다 2021년 교육생 모집 온라인 설명회<!-- 20201205 김소라 수정 -->
+                </span>
+                    </li>
+                </ul>
+            </div>
+
+            <!--<div class="video-box">
+              <div class="short-title">인사말씀</div>
+              <div class="video-wrap">
+                <iframe src="https://www.youtube.com/embed/2gE07GStEIk" frameborder="0" allowfullscreen></iframe>
+              </div>
+              <p>이민석  |  이노베이션 아카데미 학장</p>
+            </div>-->
+        </div>
+    </div>
+</div>
+
+
+<script>
+    includeHTML(function () {
+        $("#header .gnb > ul > li:eq(4)").addClass("on");
+    });
+</script>

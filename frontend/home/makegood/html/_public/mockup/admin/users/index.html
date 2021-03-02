@@ -1,0 +1,45 @@
+<!--HEAD
+    {
+        "title": "목록 - 사용자관리"
+    }
+HEAD-->
+{% include 'components/admin/header.html' ignore missing %}
+<main class="container-fluid py-1">
+    <h1 class="h3">회원 목록</h1>
+    <table class="table table-sm table-striped text-center">
+        <colgroup>
+            <col style="width:5em">
+            <col />
+            <col />
+            <col />
+            <col style="width:10em">
+            <col style="width:3em">
+        </colgroup>
+        <thead class="thead-dark small">
+            <tr>
+                <th>#</th>
+                <th>id</th>
+                <th>nick</th>
+                <th>name</th>
+                <th>use</th>
+                <th>withdraw</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% if body.rows %}
+                {% for row in body.rows %}
+                <tr>
+                    <td>{{row.idx}}</td>
+                    <td><a href="/admin/users/detail?id={{row.id}}">{{row.uid}}</a></td>
+                    <td>{{row.nick}}</td>
+                    <td>{{row.name}}</td>
+                    <td>{{row.infomation.created_at}}</td>
+                    <td>{{row.withdraw}}</td>
+                </tr>
+                {% endfor %}
+            {% endif %}
+        </tbody>
+    </table>
+    {% include 'components/paging.html' ignore missing %}
+</main>
+{% include 'components/admin/footer.html' ignore missing %}

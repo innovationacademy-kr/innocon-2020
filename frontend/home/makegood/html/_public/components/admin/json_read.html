@@ -1,0 +1,11 @@
+{% for k, r in rows %}
+    <dt class="col-{{4 - depth}} offset-{{depth}}">{{k}}</dt>
+    {% if r is iterable %}
+    <dd class="w-100"></dd>
+    {% include 'components/admin/json_read.html' ignore missing with {'depth': depth + 1, 'rows': r} %}
+    {% else %}
+        <dd class="col-8">
+            {{r}}
+        </dd>
+    {% endif %}
+{% endfor %}

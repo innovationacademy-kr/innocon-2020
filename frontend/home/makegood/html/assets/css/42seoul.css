@@ -1,0 +1,111 @@
+/* 2020 INNOCON */
+.title-img img {
+	width: 100%;
+}
+.title-img .m-img {
+	display: none;
+}
+.video-content{
+	width: 100%;
+	overflow: hidden;
+}
+.video-content .title,.process-content .title{
+	width:20%;
+	float:left;
+}
+.video-content .title h3,.process-content .title h3{
+	font-size: 40px;
+    color: #54fe54;
+    border-left: 10px solid #54fe54;
+    text-indent: 20px;
+    padding: 15px 0;
+    font-weight: bold;
+}
+.video-right{
+	width:80% !important;
+	max-width: 940px;
+	float:left;
+}
+.content-desc{
+	margin: 20px 0;
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+}
+.content-desc h4{max-width:940px; width:100%; margin:auto; font-size: 24px;padding:10px 0; background: #acacac; color: #000;}
+.content-desc p{margin: 38px 0 5px;font-family: 'NanumSquare';}
+.btn-area{width:100%; height:auto;overflow:hidden; margin:auto;padding: 35px 0;}
+.btn-area a,.btn-area .btn-box a{
+	display:block;
+	width:320px;
+	height:60px;
+	line-height:60px;
+	margin: auto;
+	text-align:center;
+	font-family:'DungGeunMo';
+	color:#000;
+}
+.btn-area.process-btn .btn-box{
+	display: flex;
+    width: 40%;
+    flex-wrap: nowrap;
+    margin: auto;
+}
+.btn-area.process-btn .btn-box a{margin:0 20px;}
+.btn-area a.white-btn{background:#fff;}
+.btn-area a.color-btn{background:#54fe54;}
+@media (max-width:1280px) {
+	.video-content .title,.process-content .title{
+		width:100%;
+		float:none;
+	}
+	.video-right{float:none;width: 100% !important;}
+	.content-desc h4{width:80%;}
+	.content-desc{
+		width: 100%;
+    	margin: auto;
+	}
+	.btn-area.process-btn .btn-box{
+		display: block;
+	}
+	.btn-area.process-btn .btn-box a{
+		width: auto;
+		margin:20px 0;
+	}
+	.btn-area a .btn-area .btn-box a {
+		width: auto;
+	}
+}
+@media (max-width:1024px) {
+
+}
+@media (max-width:768px) {
+	.title-img .p-img {
+		display: none;
+	}
+	.title-img .m-img {
+		display: block;
+	}
+	.content-desc{
+		font-size: 16px;
+	}
+	.content-desc h4{
+		font-size: 20px;
+	}
+	.btn-area a, .btn-area .btn-box a{
+		font-size:16px;
+	}
+}
+@media (max-width:640px) {
+}
+@media (max-width:480px) {
+	.video-content .title h3, .process-content .title h3{
+		padding: 6px 0;
+		border-left: 8px solid #54fe54;
+		font-size: 30px;
+	}
+	.tab-3 li a{font-size:13px !important;}
+}
+@media (max-width:380px) {
+	.tab-3 li a{font-size:12px !important;}
+}

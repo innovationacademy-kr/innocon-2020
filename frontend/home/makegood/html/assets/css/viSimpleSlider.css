@@ -1,0 +1,98 @@
+.viSimpleSlider, #testDiv {
+  width: 100%;
+  background-color: #eee;
+  overflow: hidden;
+}
+
+.viSimpleSlider ul > li, #testDiv ul > li {
+  position: absolute;
+  font-size: 0;
+  line-height: 0;
+}
+
+.viSimpleSlider ul > li img, #testDiv ul > li img {
+  width: 100%;
+  height: auto;
+}
+
+.viSimpleSlider ul > li .slideTo, #testDiv ul > li .slideTo {
+  background-color: #222;
+  color: #fff;
+}
+
+.viSimpleSlider ul > li .slideTo.active, #testDiv ul > li .slideTo.active {
+  background-color: green;
+}
+
+.viSimpleSlider ul > li .slideTo > div, #testDiv ul > li .slideTo > div {
+  font-size: 14px;
+  margin-top: -20px;
+}
+
+.viSimpleSlider ul > li .slideTo > img, #testDiv ul > li .slideTo > img {
+  vertical-align: top;
+}
+
+.viSimpleSlider ul > li span.indexNumber, #testDiv ul > li span.indexNumber {
+  display: block;
+  position: absolute;
+  z-index: 3;
+  left: 80px;
+  top: 200px;
+  color: #fff;
+  font-size: 16px;
+}
+
+.viSimpleSlider .indicate, #testDiv .indicate {
+  width: 100%;
+  bottom: 10px;
+  z-index: 120;
+  text-align: center;
+}
+
+.viSimpleSlider .indicate > a, #testDiv .indicate > a {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: #a1a1a1;
+  margin:0 5px;
+}
+
+.viSimpleSlider .indicate > a.active, #testDiv .indicate > a.active {
+  background-color: #54fe54;
+}
+
+.viSimpleSlider .indicate:after, #testDiv .indicate:after {
+  display: block;
+  visibility: hidden;
+  content: ".";
+  clear: both;
+  text-indent: -9999px;
+  height: 0;
+}
+
+.viSimpleSlider a.arrowBtn, #testDiv a.arrowBtn {
+  display: block;
+  position: absolute;
+  width: 30px;
+  top: 50%;
+  height: 30px;
+  margin-top: -15px;
+  z-index: 120;
+}
+
+.viSimpleSlider a.arrowBtn.prev, #testDiv a.arrowBtn.prev {
+  left: 10px;
+  background-image: url("../img/left-arrow.png");
+  background-position: 50% 50%;
+  background-size: 24px;
+  background-repeat: no-repeat;
+}
+
+.viSimpleSlider a.arrowBtn.next, #testDiv a.arrowBtn.next {
+  right: 10px;
+  background-image: url("../img/right-arrow.png");
+  background-position: 50% 50%;
+  background-size: 24px;
+  background-repeat: no-repeat;
+}

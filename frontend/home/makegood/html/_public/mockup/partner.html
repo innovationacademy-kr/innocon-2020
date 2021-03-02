@@ -1,0 +1,103 @@
+<!--HEAD
+    {
+        "title": "이노베이션"
+        ,"meta": [
+            {"property": "og:description",  "content":"이노베이션"}
+        ]
+    }
+HEAD-->
+<link rel="stylesheet" type="text/css" href="/assets/css/partner.css" />
+{% include 'client/kr/components/header.html' %}
+{% include 'client/kr/components/drawer-menu.html' %}
+
+<div id="container">
+    <div class="title-top">
+        <div class="title-top-bn">
+            <h2>2020<br>inno-<em>con</em></h2>
+            <p>2020이노베이션아카데미컨퍼런스<br><span class="sub">: CHANGE THE WORLD WITH SOFTWARE</span></p>
+            <div class="bg"><img src="/assets/images/hire/top_banner_img_02.svg" alt="채용정보관" class="program-top-bn-img"></div> <!-- 20201126 수정 -->
+        </div>
+    </div>
+    <!--20201126 모바일 버전으로 이미지 추가-->
+    <div class="mob-top-img">
+        <img src="/assets/images/hire/top_banner_img_02.svg" alt="채용정보관" class="mob-program-top-bn-img">
+    </div>
+    <div class="alliance-top-info">
+        <div class="alliance-top-info-inner">
+            <div class="table">
+                <div class="row">
+                    <h3 class="cell title">제휴기업<br></h3>
+                </div>
+                <div class="row">
+                    <p class="cell cont">
+                        <span class="sub"> 이노베이션 아카데미의 다양한 제휴 기업들의 정보를 확인해보세요!<br>또한, 이노베이션 아카데미와의 파트너 제휴를 신청하세요!</span>
+                    </p>
+                </div>
+            </div>
+            <div class="cell-btn">
+                <a href="partner" class="hire-link">제휴기업<span>(파트너사)</span> 신청안내</a>
+                <a href="/assets/files/이노베이션 아카데미 컨퍼런스_파트너사제휴관_참가신청서.hwp" class="hire-download-link" download>제휴기업<span>(파트너사)</span> 신청서 다운로드</a>
+            </div>
+        </div>
+        <a href="/partner" class="hire-link mob-btn">제휴기업<span>(파트너사)</span> 신청안내</a>
+        <a href="/assets/files/이노베이션 아카데미 컨퍼런스_파트너사제휴관_참가신청서.hwp" class="hire-download-link  mob-btn" download>제휴기업<span>(파트너사)</span> 신청서 다운로드</a>
+    </div>
+
+    <div id="contents">
+        <div class="recruitment">
+            <h3>이노베이션 아카데미 제휴기업(파트너사) 신청 안내</h3>
+            <div>
+                <strong>이노베이션 아카데미는</strong>
+                <p>
+                    기업과의 협력을 통해 교육생의 기업협력 프로젝트 참여, 현업개발자와의 멘토링 지원, 우수 교육생들의 인턴참여 등 소프트웨어 인재영성을 위한 협력 체계 구축하고 있습니다.
+                </p>
+            </div>
+            <div>
+                <strong>MOU 주요 내용</strong>
+                <p>
+                    1. 공동 프로젝트 개발<br>
+                    2. 멘토링 지원<br>
+                    3. 인턴 및 채용협력<br>
+                    4. 공동행사(해커톤 등) 개최<br>
+                    5. 개발자 생태계활동 참여
+                </p>
+            </div>
+            <div>
+                <strong>신청방법</strong>
+                <ul class="step table">
+                    <li>
+                        <div class="gray">step_1</div>
+                        <p>제휴기업<br>신청서 작성</p>
+                    </li>
+                    <li>
+                        <div class="gray">step_2</div>
+                        <p>신청서 제출<br>참가신청서 작성 후<br>메일로 신청<br>2020innocon@gmail.com</p>
+                    </li>
+                    <li>
+                        <div class="gray">step_3</div>
+                        <p>참가 신청 확인<br>재단과의 협의 필요</p>
+                    </li>
+                    <li>
+                        <div class="gray">step_4</div>
+                        <p>제휴기업<br>신청 완료</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="btn">
+                <a href="#" class="hire-download-link">제휴기업<span>(파트너사)</span> 신청서 다운로드</a>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function() {
+        $(".moreBtn").click(function() {
+            $(this).parent().toggleClass("active");
+
+        });
+    });
+
+    includeHTML(function () {
+        $("#header .gnb > ul > li:eq(3)").addClass("on");
+    });
+</script>

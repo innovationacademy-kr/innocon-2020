@@ -1,0 +1,30 @@
+<!--HEAD
+    {
+        "title": "등록 - 견적문의"
+    }
+HEAD-->
+{% include 'components/admin/header.html' ignore missing %}
+<main class="container-fluid py-1">
+    <h1 class="h3">등록 - 견적문의</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% include 'components/admin/form/enquiry.html' ignore missing %}
+        <button type="submit" class="btn btn-danger">등록</button>
+    </form>
+</main>
+{% include 'components/admin/footer.html' ignore missing %}
+<script>
+    $('main form').on('submit', function () {
+        //견적내용 선택여부 확인
+        if ($('input[name="infomation[category][]"]:checked').length == 0) {
+            alert('견적내용을 1개 이상 선택하세요');
+            return false;
+        }
+
+        if (confirm('등록하시겠습니까')) {
+
+        }
+        else {
+            return false;
+        }
+    });
+</script>

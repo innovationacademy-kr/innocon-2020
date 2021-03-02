@@ -1,0 +1,163 @@
+{% if msg %}
+    {% for row in msg %}
+        <div class="form-row">
+            <div>
+                {{row}}
+            </div>
+        </div>
+    {% endfor %}
+{% endif %}
+<div class="form-row">
+    <div class="form-group col-md-12">
+        <label for="title">
+            게시판이름
+        </label>
+        <input type="text" class="form-control" id="title" placeholder="게시판이름" name="title" value="{{body.post.title}}" required autocomplete="off">
+    </div>
+</div>
+<div class="form-row">
+    <div class="form-group col-md-12">
+        <label for="title">
+            코드
+        </label>
+        <input type="text" class="form-control" id="title" placeholder="코드" name="code" value="{{body.post.code}}" autocomplete="off">
+    </div>
+</div>
+<div class="form-row">
+    <div class="form-group col-md-12">
+        <label for="title">
+            비밀글
+        </label>
+        <input type="text" class="form-control" id="title" placeholder="비밀글" name="option[default][secret]" value="{{body.post.option.default.secret}}" required autocomplete="off">
+    </div>
+</div>
+<div class="form-row">
+    <div class="form-group col-md-12">
+        <label for="title">
+            OFFSET
+        </label>
+        <input type="text" class="form-control" id="title" placeholder="OFFSET" name="option[offset]" value="{{body.post.option.offset}}" autocomplete="off">
+    </div>
+</div>
+<div class="form-row">
+    <div class="form-group col-md-12">
+        <label for="infomation_tags">
+            거부 IP
+        </label>
+        <div class="tags form-control">
+            {% if body.post.infomation.tags %}
+                {% for row in body.post.infomation.tags %}
+                    <div class="el mr-2">
+                        <input type="hidden" name="infomation[tags][]" value="{{row}}">
+                        <span class="badge badge-primary" onclick="tag_remove($(this));">
+                            {{row}}
+                            <i class="remove"></i>
+                        </span>
+                    </div>
+                {% endfor %}
+            {% endif %}
+            <input type="text" data-name="infomation[tags][]" id="infomation_tags" placeholder="태그" autocomplete="off">
+        </div>
+    </div>
+</div>
+
+<div class="form-row">
+    <div class="form-group col-md-12">
+        <label for="title">
+            기본값
+        </label>
+        <div class="form-group row">
+            {% for idx in  ['secret','hidden','html','title','content','infomation']%}
+                <div class="col-12">
+                    <dl class="row">
+                        {% if idx == 'infomation' %}
+                            <dt class="col-3">
+                                {{idx}}
+                            </dt>
+                            <dd class="col-4">
+                                <input type="text" class="form-control" data-idx="infomation" placeholder="key (되도록 영문으로 중복되면 안된다)">
+                            </dd>
+                            <dd class="col-2">
+                                <select class="custom-select" data-idx="infomation">
+                                    <option>
+                                        text
+                                    </option>
+                                    <option>
+                                        array
+                                    </option>
+                                </select>
+                            </dd>
+                            <dd class="col-2">
+                                <button type="button" class="btn btn-primary btn-block" data-action="add" data-idx="infomation">
+                                    하위추가
+                                </button>
+                            </dd>
+                        {% else %}
+                            <dt class="col-3">
+                                {{idx}}
+                            </dt>
+                        {% endif %}
+                        {% if body.post.option.default[idx] and body.post.option.default[idx] is iterable %}
+                            <dd class="w-100"></dd>
+                            {% include 'components/admin/json_input.html' ignore missing with {'input_name': ['option[default][', idx, ']']|join(),'depth': 1, 'rows': body.post.option.default[idx]} %}
+                        {% else %}
+                            <dd class="col-9">
+                                <input class="form-control" type="text" name="{{['option[default][', idx, ']']|join()}}" value="{{body.post.option.default[idx]}}">
+                            </dd>
+                        {% endif %}
+                    </dl>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+<div class="form-row">
+    <div class="form-group col-md-12 mb-0">
+        <label for="option_category">
+            권한
+        </label>
+    </div>
+    <div class="form-group col-md-12">
+        {% for v in ['목록','읽기','쓰기','덧글'] %}
+            <div class="custom-control custom-checkbox mr-5">
+                <input type="checkbox" class="custom-control-input" id="info_cate_{{loop.index}}" name="option[category][]" value="{{v}}" {% if v in body.post.infomation.category %} checked {% endif %}>
+                <label class="custom-control-label" for="info_cate_{{loop.index}}">
+                    {{v}}
+                </label>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+<div class="form-row">
+    <div class="form-group col-md-12">
+        <label>
+            설명글
+        </label>
+        <textarea name="content" class="form-control" rows="20" required>
+            {{body.post.summary}}
+        </textarea>
+    </div>
+</div>
+<script>
+    $('button[data-action=add]').bind({
+        click: function() {
+            console.log($('input[data-idx=' + $(this).attr('data-idx') + ']').val());
+            if ($('input[data-idx=' + $(this).attr('data-idx') + ']').val().length == 0) {
+                alert('키 값을 입력해주세요');
+                return false;
+            }
+
+            console.log($(this).parent());
+            $(this).parents('dl').append('<dd>ddd</dd>');
+        }
+    });
+</script>
+<style>
+    .custom-control {
+        display: inline-block
+    }
+
+    form dt {
+        text-transform: capitalize
+    }
+</style>

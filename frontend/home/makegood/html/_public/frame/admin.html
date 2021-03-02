@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>Admin</title>
+    <!-- 스크립트나 스타일은 모두 절대경로를 사용한다. -->
+    <script src="/assets/js/jquery-3.5.1.slim.js"></script>
+    <script src="/assets/js/popper-2.4.4.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.js?features=fetch"></script>
+
+    <link rel="stylesheet" href="/assets/bootstrap-4.5.2/css/bootstrap.css" />
+    <script src="/assets/bootstrap-4.5.2/js/bootstrap.js"></script>
+    <script src="/assets/bootstrap-4.5.2/js/bootstrap.bundle.js"></script>
+    <style>
+        textarea {
+            resize: none;
+        }
+    </style>
+</head>
+
+<body>
+    {{ main|raw }}
+</body>
+
+</html>

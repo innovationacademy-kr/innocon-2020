@@ -1,0 +1,46 @@
+<!--HEAD
+    {
+        "title": "상세 - 사용자관리"
+    }
+HEAD-->
+<main>
+    <table>
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>id</th>
+                <th>nick</th>
+                <th>name</th>
+                <th>use</th>
+                <th>withdraw</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+</main>
+<script src="/script/user/read"></script>
+<script>
+    var param = _user.query2obj();
+    _user.read(param, function (res) {
+        var tgt = $('main table tbody');
+        // for (const k in res.rows) {
+        //     if (res.rows.hasOwnProperty(k)) {
+        //         const row = res.rows[k];
+        //         var tr = $('<tr>');
+        //         tr.append(
+        //             '<td>' + (res.count - k - (res.paging.current - 1) * res.paging.offset) + '</td>' +
+        //             '<td><a href="/admin/users/detail?id=' + row.id + '">' + row.uid + '</a></td>' +
+        //             '<td>' + row.nick + '</td>' +
+        //             '<td>' + row.name + '</td>' +
+        //             '<td>' + row.use + '</td>' +
+        //             '<td>' + row.withdraw + '</td>'
+        //         );
+
+        //         tgt.append(tr);
+        //     }
+        // }
+
+    });
+</script>

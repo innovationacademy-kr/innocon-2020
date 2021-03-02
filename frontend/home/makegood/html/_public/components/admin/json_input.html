@@ -1,0 +1,16 @@
+{% for k, r in rows %}
+    <dt class="col-{{3 - depth}} {% if depth > 0 %} offset-{{depth}} {% endif %}">{{k}}</dt>
+    {% if r is iterable %}
+        <dd class="w-100"></dd>
+        {% include 'components/admin/json_input.html' ignore missing with {'input_name': [input_name, '[', k,']']|join() ,'depth': depth + 1, 'rows': r} %}
+    {% else %}
+        <dd class="col-9">
+            <input name="{{[input_name, '[', k,']']|join()}}" value="{{r}}" class="form-control">
+        </dd>
+    {% endif %}
+    {% if loop.revindex0 == 0 %}
+        <dd class="col-9 offset-3">
+            <button type="button" class="btn btn-primary btn-sm">추가</button>
+        </dd>
+    {% endif %}
+{% endfor %}

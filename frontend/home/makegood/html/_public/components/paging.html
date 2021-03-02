@@ -1,0 +1,15 @@
+<nav>
+    <ul class="pagination pagination-sm justify-content-center">
+        <li class="page-item"><a class="page-link" href="{{body.paging.href}}&page={{body.paging.first}}">First</a>
+        </li>
+        {% for nav in body.paging.nav %}
+        {% if body.paging.current == nav %}
+        <li class="page-item active"><a class="page-link" href="{{body.paging.href}}&page={{nav}}">{{ nav }}</a></li>
+        {% else %}
+        <li class="page-item"><a class="page-link" href="{{body.paging.href}}&page={{nav}}">{{ nav }}</a></li>
+        {% endif %}
+        {% endfor %}
+        <li class="page-item"><a class="page-link" href="{{body.paging.href}}&page={{body.paging.last}}">Last</a>
+        </li>
+    </ul>
+</nav>

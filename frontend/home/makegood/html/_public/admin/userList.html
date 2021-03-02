@@ -1,0 +1,255 @@
+{% extends 'index.html' %}
+{% block contents %}
+    <div id="main">
+        <div class="row">
+            <!-- Search for small screen-->
+            <div class="container">
+                <div class="row">
+                    <div class="col s12 m6 l6">
+                        <h5 class="breadcrumbs-title mt-0 mb-0"><span>사전등록정보</span></h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12">
+                <div class="container">
+                    <div class="section section-data-tables">
+                        <!-- DataTables example -->
+                        <div class="row">
+                            <div class="col s12 m12 l12">
+                                <div id="button-trigger" class="card card card-default scrollspy">
+                                    <div class="card-content">
+                                        <h4 class="card-title">INNO-CON 사전 등록 리스트</h4>
+                                        <div class="row">
+                                            <div class="col s12">
+                                                <table id="page-length-option"  class="display" style="width: 100%">
+                                                    <thead>
+                                                    <tr>
+                                                        <th>No.</th>
+                                                        <th>메일주소</th>
+                                                        <th>이름</th>
+                                                        <th>핸드폰번호</th>
+                                                        <th>소속</th>
+                                                        <th>관심분야</th>
+                                                        <th>유입경로</th>
+                                                        <th>수신여부</th>
+                                                        <th>발송여부</th>
+                                                    </tr>
+                                                    </thead>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content-overlay"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="detailUser" tabindex="-1" role="basic" aria-hidden="true" style="height: fit-content;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="float: right; border:none;background-color: transparent;">
+                        <i class="material-icons prefix" style="font-size: 35px;">close</i>
+                    </button>
+                    <h4 class="modal-title">회원정보</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="card-content">
+                        <form id="detailInfo">
+                            <div style="width:50%;float: right;padding-right: 20px;">
+                                <div class="row" style="float: right">
+                                    <label for="created_at">등록날짜</label>
+                                    <span id="created_at"></span>
+                                </div>
+                                <div class="row updateDiv" style="float: right;display: none;">
+                                    <label for="updated_at">수정날짜</label>
+                                    <span id="updated_at"></span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <i class="material-icons prefix">account_circle</i>
+                                    <input id="name" name="name" type="text">
+                                    <label for="name">이름</label>
+                                </div>
+                                <div class="input-field col m6 s12">
+                                    <i class="material-icons prefix">email</i>
+                                    <input id="email" name="email" type="email">
+                                    <label for="email">이메일</label>
+                                </div>
+                                <div class="input-field col m6 s12">
+                                    <i class="material-icons prefix">mark_email_read</i>
+                                    <label for="acceptance">수신여부</label>
+                                    <p class="mt-1" style="width: calc(100% - 7rem);float: right; padding-top:2%;">
+                                        <label>
+                                            <input class="with-gap" name="acceptance" type="radio" value=1 checked="">
+                                            <span>O</span>
+                                        </label>
+                                        <label>
+                                            <input class="with-gap" name="acceptance" type="radio" value=0 checked="">
+                                            <span>X</span>
+                                        </label>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col m6 s12">
+                                    <i class="material-icons prefix">phone</i>
+                                    <input id="phone" name="phone" type="text">
+                                    <label for="phone">연락처</label>
+                                </div>
+                                <div class="input-field col m6 s12">
+                                    <i class="material-icons prefix">meeting_room</i>
+                                    <input id="affiliation" name="affiliation" type="text">
+                                    <label for="affiliation">소속</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <i class="material-icons prefix">bookmarks</i>
+                                    <label for="intrs">관심분야</label>
+                                </div>
+                                <div class="input-field col s12" id="intrs">
+                                    <p class="mb-1" style="padding-left: 20px;">
+                                        <label>
+                                            <input name=intrs type="checkbox" class="filled-in" value="코딩">
+                                            <span>코딩</span>
+                                        </label>
+                                        <label>
+                                            <input name=intrs type="checkbox" class="filled-in" value="S/W개발자">
+                                            <span>S/W개발자</span>
+                                        </label>
+                                        <label>
+                                            <input name=intrs type="checkbox" class="filled-in" value="S/W교육">
+                                            <span>S/W교육</span>
+                                        </label>
+                                        <label>
+                                            <input name=intrs type="checkbox" class="filled-in" value="S/W취업">
+                                            <span>S/W취업</span>
+                                        </label>
+                                        <label>
+                                            <input name=intrs type="checkbox" class="filled-in" value="42SEOUL">
+                                            <span>42 SEOUL</span>
+                                        </label>
+                                        <label>
+                                            <input name=intrs type="checkbox" class="filled-in" value="새로운소프트웨어">
+                                            <span>새로운 소프트웨어 학습 시스템</span>
+                                        </label>
+                                        <label>
+                                            <input name=intrs type="checkbox" class="filled-in" value="기타">
+                                            <span>기타</span>
+                                            <input type="text" id="intrsEtcValue"/>
+                                        </label>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <i class="material-icons prefix">location_disabled</i>
+                                    <label for="inflowPath">유입경로</label>
+                                </div>
+                                <div class="input-field col s12" id="inflowPath">
+                                    <p class="mb-1" style="padding-left: 20px">
+                                        <label>
+                                            <input name=inflowPath type="checkbox" class="filled-in" value="아카데미홈페이지">
+                                            <span>이노베이션 아카데미 홈페이지</span>
+                                        </label>
+                                        <label>
+                                            <input name=inflowPath type="checkbox" class="filled-in" value="SNS">
+                                            <span>SNS</span>
+                                        </label>
+                                        <label>
+                                            <input name=inflowPath type="checkbox" class="filled-in" value="유사기관 홈페이지">
+                                            <span>유사기관 홈페이지</span>
+                                        </label>
+                                        <label>
+                                            <input name=inflowPath type="checkbox" class="filled-in" value="email">
+                                            <span>안내 E-mail 및 초대장</span>
+                                        </label>
+                                        <label>
+                                            <input name=inflowPath type="checkbox" class="filled-in" value="기사및광고">
+                                            <span>언론매체 기사 및 광고</span>
+                                        </label>
+                                        <label>
+                                            <input name=inflowPath type="checkbox" class="filled-in" value="홍보포스터">
+                                            <span>홍보 포스터</span>
+                                        </label>
+                                        <label>
+                                            <input name=inflowPath type="checkbox" class="filled-in" value="소개">
+                                            <span>주변 소개</span>
+                                        </label>
+                                        <label>
+                                            <input name=inflowPath type="checkbox" class="filled-in" value="기타">
+                                            <span>기타</span>
+                                            <input type="text" id="inflowPathEtcValue"/>
+                                        </label>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <i class="material-icons prefix">question_answer</i>
+                                    <textarea id="qna" name="qna" class="materialize-textarea"></textarea>
+                                    <label for="qna">질문</label>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-danger" data-toggle="modal" id="delBtn1" style="background-color: #8b1014">삭제</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal" id="submit">확인</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <div class="modal fade" id="deleteChk" tabindex="-1" role="basic" aria-hidden="true" style="height: fit-content;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">회원삭제</h4>
+                </div>
+                <div class="modal-body">
+                    정말 삭제 하시겠습니까?
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-danger" data-toggle="modal" id="delBtn2" style="background-color: #8b1014">삭제</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal" id="deleteClose">취소</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <div class="modal fade" id="updateChk" tabindex="-1" role="basic" aria-hidden="true" style="height: fit-content;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">정보수정</h4>
+                </div>
+                <div class="modal-body">
+                    정말 수정 하시겠습니까?
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-danger" data-toggle="modal" id="updateBtn" style="background-color: #8b1014">수정</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal" id="updateClose">취소</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <script src="../../assets/script/register.js"></script>
+    <script src="../../assets/script/list.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function() {
+            List.init();
+        });
+    </script>
+{% endblock %}

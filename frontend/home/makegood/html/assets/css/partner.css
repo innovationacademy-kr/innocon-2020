@@ -1,0 +1,208 @@
+.alliance-top-info{
+	margin: 40px auto;
+    max-width: 1580px;
+    padding-right: 1%;
+    box-sizing: border-box;
+}
+.alliance-top-info-inner{
+	padding: 20px;
+    border: 1px solid #eee;
+    position: relative;
+}
+.alliance-top-info-inner .table{
+	display: inline-block;
+}
+.alliance-top-info-inner .table .title{
+	font-size: 35px;
+    color: #fff;
+	padding-right: 15px;
+    font-family: 'DungGeunMo';
+    font-weight: 500;
+}
+.alliance-top-info-inner.table .cell{
+	padding: 5px 0;
+    vertical-align: 0px;
+}
+.alliance-top-info-inner .table .cont{
+    color: #fff;
+}
+.alliance-top-info-inner .table .cont span.sub{
+	display: inline-block;
+	margin-top:5px;
+	font-size: 20px;
+    font-family: 'nanumsquare';
+}
+.cell-btn{
+	float: right;
+}
+.hire-link,.hire-download-link{
+    width:450px;
+    color: #fff;
+    font-size: 25px;
+	padding:6px;
+	text-align: center;
+}
+.hire-link span,.hire-download-link span{
+	display:inline-block;
+	font-size:16px;
+	vertical-align: baseline;
+	font-family: 'nanumsquare';
+}
+.hire-link{
+	margin-bottom:2%;
+	background-color:#0000ff;
+}
+.hire-download-link{
+	background-color:#ff0000;
+}
+.mob-btn{display:none;}
+
+.recruitment {
+	border: 1px solid #eee;
+}
+.recruitment h3 {
+	background: #fff;
+	font-size: 35px;
+	border: 2px solid #a1a1a1;
+	margin: 10px;
+	font-weight: normal;
+	padding: 8px 20px;
+}
+.recruitment > div {
+	padding: 25px 30px;
+}
+.recruitment strong {
+	display: block;
+	color: #54fe54;
+	font-weight: normal;
+	font-size: 35px;
+	margin-bottom: 15px;
+}
+.recruitment p {
+	font-size: 20px;
+	color: #fff;
+	font-family: "nanumsquare";
+	font-weight: 300;
+	line-height: 1.2;
+}
+.recruitment .step {
+	width: 100%;
+    font-size: 0;
+}
+.recruitment .step li {
+	display: inline-block;
+	border: 1px solid #eee;
+	width: 24.25%;
+	height: 190px;
+    margin-right: 1%;
+}
+.recruitment .step li:last-child {
+	margin-right: 0;
+}
+.recruitment .step li .gray {
+	background: #a1a1a1;
+    font-size: 25px;
+    border: 1px solid #fff;
+    margin: 10px;
+    text-transform: uppercase;
+    line-height: 1.2;
+    padding: 0 10px;
+}
+.recruitment .step li p {
+	padding: 40px 20px 0px;
+}
+.recruitment .step li:nth-child(2) p {
+	padding-top: 15px;
+}
+.recruitment > div.btn {
+	padding: 0 30px 60px;
+    margin-top: -10px;
+}
+
+@media (max-width:1280px) {
+	.alliance-top-info-inner .table {
+		width: 52%;
+	}
+	.recruitment p {
+		font-size: 17px;
+	}
+}
+@media (max-width:1024px) {
+	.hire-link,.hire-download-link{
+		display:none;
+	}
+	.hire-link{
+		margin-bottom:0;
+	}
+	.mob-btn{
+		display:block;
+		width:100%;
+		margin:2% 0;
+	}
+	.recruitment h3 {
+		font-size: 24px;
+	}
+	.recruitment strong {
+		font-size: 24px;
+	}
+	.recruitment p {
+		font-size: 16px;
+	}
+	.recruitment .step li {
+		width:49.5%;
+		height:160px;
+		margin-bottom: 7px;
+	}
+	.recruitment .step li:nth-child(2n) {
+		margin-right: 0;
+	}
+	.recruitment .step li .gray {
+		font-size: 20px;
+	}
+	.recruitment > div.btn .hire-download-link {
+		display: block;
+		width: 100%;
+	}
+
+}
+@media (max-width:768px) {
+}
+@media (max-width:640px) {
+	.recruitment h3 {
+	    font-size: 20px;
+	}
+	.recruitment strong {
+	    font-size: 20px;
+	}
+	.recruitment p {
+	    font-size: 14px;
+	}
+	.recruitment > div {
+	    padding: 15px 20px;
+	}
+	.recruitment .step li {
+		height: 145px;
+	}
+}
+@media (max-width:480px) {
+	.recruitment .step li {
+		width: 100%;
+		margin-right: 0!important;
+		height: auto;
+	}
+	.recruitment .step li p {
+	    padding: 20px 20px 35px;
+	}
+	.recruitment > div.btn .hire-download-link {
+	    font-size: 16px;
+	}
+	.hire-link span, .hire-download-link span {
+		font-size: 12px;
+	}
+	.hire-link, .hire-download-link {
+		font-size: 20px;
+		word-break: keep-all;
+	}
+}
+@media (max-width:380px) {
+}

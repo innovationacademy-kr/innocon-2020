@@ -1,0 +1,17 @@
+/* @font-face {
+  font-family: 'DungGeunMo';
+  font-style: normal;
+  font-weight: 400;
+  src: url("DungGeunMo/DungGeunMo.woff") format('woff'),
+       url("DungGeunMo/DungGeunMo.otf") format('otf'),
+       url("DungGeunMo/DungGeunMo.eot") format('eot'),
+       url("DungGeunMo/DungGeunMo.ttf") format('ttf'),
+       url("DungGeunMo/DungGeunMo.woff2") format('woff2');
+}  */
+
+@font-face {
+  font-family: 'DungGeunMo';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}

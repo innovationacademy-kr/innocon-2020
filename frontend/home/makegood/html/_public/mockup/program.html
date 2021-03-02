@@ -1,0 +1,460 @@
+<!--HEAD
+    {
+        "title": "이노베이션"
+        ,"meta": [
+            {"property": "og:description",  "content":"이노베이션"}
+        ]
+    }
+HEAD-->
+<link rel="stylesheet" type="text/css" href="/assets/css/program.css" />
+{% include 'client/kr/components/header.html' %}
+{% include 'client/kr/components/drawer-menu.html' %}
+
+<div id="container">
+
+    <!-- TOP (이미지 650x200) -->
+    <div class="program-top">
+        <div class="title-top-bn">
+            <h2>2020<br>inno-<em>con</em></h2>
+            <p>2020이노베이션아카데미컨퍼런스<br><span class="sub">: CHANGE THE WORLD WITH SOFTWARE</span></p>
+            <div class="bg"><img src="/assets/images/program/top_banner_img_05.svg" alt="2020INNO-CON" class="program-top-bn-img"></div> <!-- 20201126 수정 -->
+        </div>
+        <!--20201126 모바일 버전으로 이미지 추가-->
+        <div class="mob-top-img">
+            <img src="/assets/images/program/top_banner_img_05.svg" alt="프로그램" class="mob-program-top-bn-img">
+        </div>
+        <!--20201126 모바일 버전으로 이미지 추가 끝-->
+        <div class="program-top-info">
+            <div class="program-top-info-inner">
+                <div class="table">
+                    <div class="row">
+                        <div class="cell title">일시</div>
+                        <div class="cell cont">2020년 12월 8일 (화) 10:00 ~ 18:00</div>
+                    </div>
+                    <div class="row">
+                        <div class="cell title">장소</div>
+                        <div class="cell cont">2020 INNO-CON 홈페이지</div>
+                    </div>
+                    <div class="row">
+                        <div class="cell title">주제</div>
+                        <div class="cell cont">소프트웨어로 세상을 바꾸다_CHANGE THE WORLD WITH SOFTWARE</div>
+                    </div>
+                </div>
+
+                <!-- 생중계 링크 -->
+                <!-- 1207 오전 변경요망 -->
+                <a href="https://youtu.be/Tp9w7TatzJQ" target="_blank" class="program-top-live-button">생중계 행사장 입장</a>
+                <!----------------------->
+                
+                <!--<a href="#none" class="program-top-live-button" onclick="$('.program-top-live-popup').addClass('on')">-->생중계 행사장 입장</a>
+                
+                <!-- 생중계 링크 팝업 (program-top-live-popup 에 클래스명 on 추가제거) -->
+                <div class="program-top-live-popup">
+                    <i class="dim" onclick="$('.program-top-live-popup').removeClass('on')"></i>
+                    <div class="program-top-live-popup-inner">
+                        12월 8일(화) 오픈됩니다.
+                        <button onclick="$('.program-top-live-popup').removeClass('on')">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <ul class="top-tab grid2">
+        <li class="active"><a href="programs">세부프로그램</a></li>
+        <li><a href="speaker">참여인사</a></li>
+    </ul>
+
+    <div id="contents">
+        <!-- program01 : 프로그램의 세부 프로그램 내용 -->
+        <div class="program01">
+            <h3>세부 프로그램 자세히 보기</h3>
+            <div class="program01-top">
+                <!-- 활성화된 버튼에 on 클래스명 추가 (처음에는 오전 활성화) -->
+                <button class="on" onclick="$('.program01-top button').removeClass('on'); $(this).addClass('on'); $('.program01-schedule-morning').addClass('on'); $('.program01-schedule-day').removeClass('on');">오전세션</button>
+                <button onclick="$('.program01-top button').removeClass('on'); $(this).addClass('on'); $('.program01-schedule-morning').removeClass('on'); $('.program01-schedule-day').addClass('on');">오후세션</button>
+            </div>
+            <!-- 활성화된 내용에 on 클래스명 추가 (처음에는 오전 활성화) -->
+            <ul class="program01-schedule-morning on">
+                <li>
+                    <div class="program01-time">10:00-10:05</div>
+                    <div class="program01-text">
+                      <h4>오프닝 | &quot;왜 42에 왔어요?&quot;</h4>
+                    </div>
+                    <div class="program01-outlink">
+                      <a href=" https://youtu.be/FFW275q6-5Q"><img src="../../assets/images/program/icon_youtube.png" alt="유튜브">유튜브 다시보기</a>
+                      <a href="#none" onclick="$('.program01-outlink-popup').addClass('on')"><img src="../../assets/images/program/icon_naver_tv.png" alt="네이버TV">네이버TV 다시보기</a>
+                      <div class="program01-outlink-popup">
+                        <i class="dim" onclick="$('.program01-outlink-popup').removeClass('on')"></i>
+                        <div class="program01-outlink-popup-inner">
+                          <p>행사 이후 다시보기가 가능합니다.</p>
+                          <button onclick="$('.program01-outlink-popup').removeClass('on')">확인</button>
+                        </div>
+                      </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="program01-time">10:05-10:10</div>
+                    <div class="program01-text">
+                        <h4><em>[LIVE]</em>&nbsp;인사 말씀</h4>
+                        <div class="program01-subtext">
+                            <em>이민석</em>_이노베이션 아카데미 학장
+                        </div>
+                        <div class="mob-program01-subtext">
+                            <em>이민석</em>_이노베이션 아카데미 학장
+                        </div>
+                    </div>
+                    <div class="program01-outlink">
+                        <a href="https://youtu.be/6k_EHDPE19k"><img src="../../assets/images/program/icon_youtube.png" alt="유튜브">유튜브 다시보기</a>
+                        <a href="#none" onclick="$('.program01-outlink-popup').addClass('on')"><img src="../../assets/images/program/icon_naver_tv.png" alt="네이버TV">네이버TV 다시보기</a>
+                        <div class="program01-outlink-popup">
+                          <i class="dim" onclick="$('.program01-outlink-popup').removeClass('on')"></i>
+                          <div class="program01-outlink-popup-inner">
+                            <p>행사 이후 다시보기가 가능합니다.</p>
+                            <button onclick="$('.program01-outlink-popup').removeClass('on')">확인</button>
+                          </div>
+                        </div>
+                      </div>
+                </li>
+                <li>
+                    <div class="program01-time">10:10-10:30</div>
+                    <div class="program01-text">
+                        <h4>[키노트 스피치] &quot;왜 42인가?&quot;</h4>
+                        <div class="program01-subtext">
+                            <em>소피비제</em>_Ecole42 교장
+                        </div>
+                        <div class="mob-program01-subtext">
+                            <em>소피비제</em>_Ecole42 교장
+                        </div>
+                    </div>
+                    <div class="program01-outlink">
+                        <a href="https://youtu.be/gG3LMTNmaMc"><img src="../../assets/images/program/icon_youtube.png" alt="유튜브">유튜브 다시보기</a>
+                        <a href="#none" onclick="$('.program01-outlink-popup').addClass('on')"><img src="../../assets/images/program/icon_naver_tv.png" alt="네이버TV">네이버TV 다시보기</a>
+                        <div class="program01-outlink-popup">
+                            <i class="dim" onclick="$('.program01-outlink-popup').removeClass('on')"></i>
+                            <div class="program01-outlink-popup-inner">
+                                <p>행사 이후 다시보기가 가능합니다.</p>
+                                <button onclick="$('.program01-outlink-popup').removeClass('on')">확인</button>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="program01-time">10:30-11:00</div>
+                    <div class="program01-text">
+                        <h4>Global 42 소개</h4>
+                        <div class="program-sub-title">
+                            Global 42 캠퍼스 소개<br>
+                            Global 42 입학생 인터뷰
+                        </div>
+                        <div class="program01-subtext">
+                            <em>박헌병</em>_42 SV 교육생&nbsp;/&nbsp;<em>선우문형</em>_42 SV 교육생&nbsp;/&nbsp;<em>황보미</em>_42 SV 교육생&nbsp;/&nbsp;<em>이재석</em>_Ecole 42 교육생
+                        </div>
+                        <div class="mob-program01-subtext">
+                            <em>박헌병</em>_42 SV 교육생<br>
+                            <em>선우문형</em>_42 SV 교육생<br>
+                            <em>황보미</em>_42 SV 교육생생<br>
+                            <em>이재석</em>_Ecole 42 교육생
+                        </div>
+                    </div>
+                    <div class="program01-outlink">
+                        <a href="https://youtu.be/iezpDk8gbIA"><img src="../../assets/images/program/icon_youtube.png" alt="유튜브">유튜브 다시보기</a>
+                        <a href="#none" onclick="$('.program01-outlink-popup').addClass('on')"><img src="../../assets/images/program/icon_naver_tv.png" alt="네이버TV">네이버TV 다시보기</a>
+                        <div class="program01-outlink-popup">
+                            <i class="dim" onclick="$('.program01-outlink-popup').removeClass('on')"></i>
+                            <div class="program01-outlink-popup-inner">
+                                <p>행사 이후 다시보기가 가능합니다.</p>
+                                <button onclick="$('.program01-outlink-popup').removeClass('on')">확인</button>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="program01-time">11:00-11:40</div>
+                    <div class="program01-text">
+                        <h4>42 SEOUL에 대한 모든 것</h4>
+                        <div class="program-sub-title">
+                        42 SEOUL 입학 시스템 소개<br>
+                        42 서울인의 하루 브이로그<br>
+                        42 SEOUL 활동 상세보기
+                        </div>
+                    </div>
+                    <div class="program01-outlink">
+                        <a href="https://youtu.be/hbC68kZ5KaI"><img src="../../assets/images/program/icon_youtube.png" alt="유튜브">유튜브 다시보기</a>
+                        <a href="#none" onclick="$('.program01-outlink-popup').addClass('on')"><img src="../../assets/images/program/icon_naver_tv.png" alt="네이버TV">네이버TV 다시보기</a>
+        
+                        <div class="program01-outlink-popup">
+                            <i class="dim" onclick="$('.program01-outlink-popup').removeClass('on')"></i>
+                            <div class="program01-outlink-popup-inner">
+                                <p>행사 이후 다시보기가 가능합니다.</p>
+                                <button onclick="$('.program01-outlink-popup').removeClass('on')">확인</button>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="program01-time">11:40-12:40</div>
+                    <div class="program01-text">
+                        <h4><em>[LIVE]</em>&nbsp;성공적인 학습을 위한 전문가 대담</h4>
+                        <div class="program01-subtext">
+                            <em>김수보</em>_전) KTH개발자&nbsp;/&nbsp;<em>오종인</em>_전) 소셜박스 CTO&nbsp;/&nbsp;<em>이호준</em>_전) 네오위즈 개발자
+                        </div>
+                        <div class="mob-program01-subtext">
+                            <em>김수보</em>_전) KTH개발자<br>
+                            <em>오종인</em>_전) 소셜박스 CTO<br>
+                            <em>이호준</em>_전) 네오위즈 개발자<br>
+                        </div>
+                    </div>
+                    <div class="program01-outlink">
+                        <a href="https://youtu.be/aGZNB_ZPijA"><img src="../../assets/images/program/icon_youtube.png" alt="유튜브">유튜브 다시보기</a>
+                        <a href="#none" onclick="$('.program01-outlink-popup').addClass('on')"><img src="../../assets/images/program/icon_naver_tv.png" alt="네이버TV">네이버TV 다시보기</a>
+        
+                        <div class="program01-outlink-popup">
+                            <i class="dim" onclick="$('.program01-outlink-popup').removeClass('on')"></i>
+                            <div class="program01-outlink-popup-inner">
+                                <p>행사 이후 다시보기가 가능합니다.</p>
+                                <button onclick="$('.program01-outlink-popup').removeClass('on')">확인</button>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="program01-time">12:40-12:45</div>
+                    <div class="program01-text">
+                        <h4>&quot;나에게 42 서울이란?&quot;</h4>
+                        <div class="program01-subtext">
+                            <em>42 SEOUL 교육생</em>
+                        </div>
+                        <div class="mob-program01-subtext">
+                            <em>42 SEOUL 교육생</em>
+                        </div>
+                    </div>
+                    <div class="program01-outlink">
+                        <a href="https://youtu.be/44aVHcL4PqI"><img src="../../assets/images/program/icon_youtube.png" alt="유튜브">유튜브 다시보기</a>
+                        <a href="#none" onclick="$('.program01-outlink-popup').addClass('on')"><img src="../../assets/images/program/icon_naver_tv.png" alt="네이버TV">네이버TV 다시보기</a>
+                        <div class="program01-outlink-popup">
+                            <i class="dim" onclick="$('.program01-outlink-popup').removeClass('on')"></i>
+                            <div class="program01-outlink-popup-inner">
+                                <p>행사 이후 다시보기가 가능합니다.</p>
+                                <button onclick="$('.program01-outlink-popup').removeClass('on')">확인</button>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <ul class="program01-schedule-day">
+                <li>
+                    <div class="program01-time">14:00-14:20</div>
+                    <div class="program01-text">
+                      <h4><em>[LIVE]</em> [키노트 스피치]&quot;개발 생태계가 원하는 인재와 기업의 역할&quot;</h4>
+                      <div class="program01-subtext">
+                        <em>김성훈</em>_업스테이지 대표
+                      </div>
+                      <div class="mob-program01-subtext">
+                        <em>김성훈</em>_업스테이지 대표
+                      </div>
+                    </div>
+                    <div class="program01-outlink">
+                        <a href="https://youtu.be/nrZCM4exL3o"><img src="../../assets/images/program/icon_youtube.png" alt="유튜브">유튜브 다시보기</a>
+                        <a href="#none" onclick="$('.program01-outlink-popup').addClass('on')"><img src="../../assets/images/program/icon_naver_tv.png" alt="네이버TV">네이버TV 다시보기</a>
+        
+                        <div class="program01-outlink-popup">
+                            <i class="dim" onclick="$('.program01-outlink-popup').removeClass('on')"></i>
+                            <div class="program01-outlink-popup-inner">
+                                <p>행사 이후 다시보기가 가능합니다.</p>
+                                <button onclick="$('.program01-outlink-popup').removeClass('on')">확인</button>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="program01-time">14:20-14:40</div>
+                    <div class="program01-text">
+                        <h4>Global 42 Alumni의 취업 성공기</h4>
+                        <div class="program01-subtext">
+                            <em>이덕현</em>_Ecole 42 교육생&nbsp;/&nbsp;<em>JEAN</em>_Ecole 42 교육생&nbsp;/&nbsp;<em>Sevastien</em>_Ecole 42 교육생&nbsp;/&nbsp;<em>Anselme</em>_Ecole 42 교육생<br>
+                            <em>조준형</em>_42 SEOUL 교육생&nbsp;/&nbsp;<em>박영준</em>_42 SEOUL 교육생&nbsp;/&nbsp;<em>임지영</em>_42 SEOUL 교육생
+                        </div>
+                        <div class="mob-program01-subtext">
+                            <em>이덕현</em>_Ecole 42 교육생<br>
+                            <em>JEAN</em>_Ecole 42 교육생<br>
+                            <em>Sevastien</em>_Ecole 42 교육생<br>
+                            <em>Anselme</em>_Ecole 42 교육생<br>
+                            <em>조준형</em>_42 SEOUL 교육생<br>
+                            <em>박영준</em>_42 SEOUL 교육생<br>
+                            <em>임지영</em>_42 SEOUL 교육생
+                        </div>
+                    </div>
+                    <div class="program01-outlink">
+                        <a href="https://youtu.be/KDbWArFQiJo"><img src="../../assets/images/program/icon_youtube.png" alt="유튜브">유튜브 다시보기</a>
+                        <a href="#none" onclick="$('.program01-outlink-popup').addClass('on')"><img src="../../assets/images/program/icon_naver_tv.png" alt="네이버TV">네이버TV 다시보기</a>
+        
+                        <div class="program01-outlink-popup">
+                            <i class="dim" onclick="$('.program01-outlink-popup').removeClass('on')"></i>
+                            <div class="program01-outlink-popup-inner">
+                                <p>행사 이후 다시보기가 가능합니다.</p>
+                                <button onclick="$('.program01-outlink-popup').removeClass('on')">확인</button>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="program01-time">14:40-15:00</div>
+                    <div class="program01-text">
+                        <h4>42 SEOUL과 함께 하고 있는 기업</h4>
+                        <div class="program01-subtext">
+                        <em>황정환</em>_CJ올리브네트웍스 리더&nbsp;/&nbsp;<em>임세현</em>_BC카드 센터장&nbsp;/&nbsp;<em>박노헌</em>_스타셀 대표&nbsp;/&nbsp;<em>최성진</em>_코리아스타트업포럼 대표<br>
+                        <em>박준영</em>_한화생명 드림플러스 파트장&nbsp;/&nbsp;<em>김민현</em>_커먼컴퓨터 대표
+                        </div>
+                        <div class="mob-program01-subtext">
+                        <em>황정환</em>_CJ올리브네트웍스 리더<br>
+                        <em>임세현</em>_BC카드 센터장<br>
+                        <em>박노헌</em>_스타셀 대표<br>
+                        <em>최성진</em>_코리아스타트업포럼 대표<br>
+                        <em>박준영</em>_한화생명 드림플러스 파트장<br>
+                        <em>김민현</em>_커먼컴퓨터 대표
+                        </div>
+                    </div>
+                    <div class="program01-outlink">
+                        <a href="https://youtu.be/pR5evqz0ZYw"><img src="../../assets/images/program/icon_youtube.png" alt="유튜브">유튜브 다시보기</a>
+                        <a href="#none" onclick="$('.program01-outlink-popup').addClass('on')"><img src="../../assets/images/program/icon_naver_tv.png" alt="네이버TV">네이버TV 다시보기</a>
+        
+                        <div class="program01-outlink-popup">
+                            <i class="dim" onclick="$('.program01-outlink-popup').removeClass('on')"></i>
+                            <div class="program01-outlink-popup-inner">
+                                <p>행사 이후 다시보기가 가능합니다.</p>
+                                <button onclick="$('.program01-outlink-popup').removeClass('on')">확인</button>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="program01-time">15:00-15:20</div>
+                    <div class="program01-text">
+                        <h4>브레이크 타임</h4>
+                    </div>
+                </li>
+                <li>
+                    <div class="program01-time">15:20-16:20</div>
+                    <div class="program01-text">
+                      <h4><em>[LIVE]</em> 선배 개발자들이 말하는 실제 취업현장과 개발 문화</h4>
+                      <div class="program01-subtext">
+                        <em>우상훈</em>_네이버 책임리더&nbsp;/&nbsp;<em>김민태</em>_우아한 형제들 그룹장&nbsp;/&nbsp;<em>박민우</em>_LINE 테크에반젤리스트&nbsp;/&nbsp;<em>정창훈</em>_당근마켓 CTO
+                      </div>
+                      <div class="mob-program01-subtext">
+                        <em>우상훈</em>_네이버 책임리더<br>
+                        <em>김민태</em>_우아한 형제들 그룹장<br>
+                        <em>박민우</em>_LINE 테크에반젤리스트<br>
+                        <em>정창훈</em>_당근마켓 CTO
+                      </div>
+                    </div>
+                    <div class="program01-outlink">
+                        <a href="https://youtu.be/LB-Wa0opBLM"><img src="../../assets/images/program/icon_youtube.png" alt="유튜브">유튜브 다시보기</a>
+                        <a href="#none" onclick="$('.program01-outlink-popup').addClass('on')"><img src="../../assets/images/program/icon_naver_tv.png" alt="네이버TV">네이버TV 다시보기</a>
+        
+                        <div class="program01-outlink-popup">
+                          <i class="dim" onclick="$('.program01-outlink-popup').removeClass('on')"></i>
+                          <div class="program01-outlink-popup-inner">
+                            <p>행사 이후 다시보기가 가능합니다.</p>
+                            <button onclick="$('.program01-outlink-popup').removeClass('on')">확인</button>
+                          </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="program01-time">16:20-16:35</div>
+                    <div class="program01-text">
+                      <h4>슬기로운 커뮤니티 생활</h4>
+                      <div class="program01-subtext">
+                        <em>Microsoft MVP</em>&nbsp;/&nbsp;<em>OKKY</em>&nbsp;/&nbsp;<em>Korean R User Community</em>&nbsp;/&nbsp;<em>Keras Korea</em>&nbsp;/&nbsp;<em>Women who code Seoul</em>
+                      </div>
+                      <div class="mob-program01-subtext">
+                        <em>Microsoft MVP</em><br>
+                        <em>OKKY</em><br>
+                        <em>Korean R User Community</em><br>
+                        <em>Keras Korea</em><br>
+                        <em>Women who code Seoul</em>
+                      </div>
+                    </div>
+                    <div class="program01-outlink">
+                      <a href="https://youtu.be/h-CIc7HgkkI"><img src="../../assets/images/program/icon_youtube.png" alt="유튜브">유튜브 다시보기</a>
+                      <a href="#none" onclick="$('.program01-outlink-popup').addClass('on')"><img src="../../assets/images/program/icon_naver_tv.png" alt="네이버TV">네이버TV 다시보기</a>
+      
+                      <div class="program01-outlink-popup">
+                        <i class="dim" onclick="$('.program01-outlink-popup').removeClass('on')"></i>
+                        <div class="program01-outlink-popup-inner">
+                          <p>행사 이후 다시보기가 가능합니다.</p>
+                          <button onclick="$('.program01-outlink-popup').removeClass('on')">확인</button>
+                        </div>
+                      </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="program01-time">16:35-16:55</div>
+                    <div class="program01-text">
+                      <h4>이노베이션 아카데미의 개발 생태계 지원 콘텐츠 제작기</h4>
+                      <div class="program01-subtext">
+                        <em>최재규</em>_매직에코 대표&nbsp;/&nbsp;<em>노상범</em>_이브레인 대표&nbsp;/&nbsp;<em>김재인</em>_경희대학교 교수
+                      </div>
+                      <div class="mob-program01-subtext">
+                        <em>최재규</em>_매직에코 대표<br>
+                        <em>노상범</em>_이브레인 대표<br>
+                        <em>김재인</em>_경희대학교 교수
+                      </div>
+                    </div>
+                    <div class="program01-outlink">
+                      <a href="https://youtu.be/a2f7GRBS6_o"><img src="../../assets/images/program/icon_youtube.png" alt="유튜브">유튜브 다시보기</a>
+                      <a href="#none" onclick="$('.program01-outlink-popup').addClass('on')"><img src="../../assets/images/program/icon_naver_tv.png" alt="네이버TV">네이버TV 다시보기</a>
+      
+                      <div class="program01-outlink-popup">
+                        <i class="dim" onclick="$('.program01-outlink-popup').removeClass('on')"></i>
+                        <div class="program01-outlink-popup-inner">
+                          <p>행사 이후 다시보기가 가능합니다.</p>
+                          <button onclick="$('.program01-outlink-popup').removeClass('on')">확인</button>
+                        </div>
+                      </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="program01-time">16:55-17:55</div>
+                    <div class="program01-text">
+                      <h4><em>[LIVE]</em> 개발 조직 문화 전문가 라이브 대담</h4>
+                      <div class="program01-subtext">
+                        <em>노상범</em>_이브레인 대표&nbsp;/&nbsp;<em>권순선</em>_구글코리아 리드&nbsp;/&nbsp;<em>김종민</em>_앨라스틱 에반젤리스트<br>
+                        <em>홍연의</em>_LINE Developer Advocate
+                        &nbsp;/&nbsp;<em>조은옥</em>_IBM Developer &#38; University Relations Manager
+                      </div>
+                      <div class="mob-program01-subtext">
+                        <em>노상범</em>_이브레인 대표<br>
+                        <em>권순선</em>_구글코리아 리드<br>
+                        <em>김종민</em>_앨라스틱 에반젤리스트<br>
+                        <em>홍연의</em>_LINE Developer Advocate<br>
+                        <em>조은옥</em>_IBM Developer &#38; University Relations Manager
+                      </div>
+                    </div>
+                    <div class="program01-outlink">
+                      <a href="https://youtu.be/SyKK8U7rGxk"><img src="../../assets/images/program/icon_youtube.png" alt="유튜브">유튜브 다시보기</a>
+                      <a href="#none" onclick="$('.program01-outlink-popup').addClass('on')"><img src="../../assets/images/program/icon_naver_tv.png" alt="네이버TV">네이버TV 다시보기</a>
+      
+                      <div class="program01-outlink-popup">
+                        <i class="dim" onclick="$('.program01-outlink-popup').removeClass('on')"></i>
+                        <div class="program01-outlink-popup-inner">
+                          <p>행사 이후 다시보기가 가능합니다.</p>
+                          <button onclick="$('.program01-outlink-popup').removeClass('on')">확인</button>
+                        </div>
+                      </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="program-desc">
+        <p>※ 프로그램 시간은 변동될 수 있습니다.</p>
+    </div>
+</div>
+<script>
+    includeHTML(function () {
+        /* 프로그램표시 */
+        $("#header .gnb > ul > li:eq(2)").addClass("on");
+    });
+</script>

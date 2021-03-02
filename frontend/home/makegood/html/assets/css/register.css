@@ -1,0 +1,428 @@
+/* 등록 */
+.register > .desc1 {
+	color: #ff0000;
+	font-size: 20px;
+	font-family: 'nanumsquare';
+	transform: skew(-0.001deg);
+}
+.register > .desc2 {
+	color:#fff;
+	font-size: 15px;
+	font-family: 'nanumsquare';
+	margin-top: 10px;
+	transform: skew(-0.001deg);
+}
+
+.form {
+  font-size: 0;
+  margin-top: 20px;
+}
+.form .table {
+  width: 100%;
+}
+.input-list {
+  padding: 4px 0;
+}
+.input-list-in{
+  padding:10px 10px 4px
+}
+.grid3 .input-list {
+    display: inline-block;
+    width: 33.334%;
+    box-sizing: border-box;
+    vertical-align: top;
+    max-width: inherit;
+}
+.input-list .input-title {
+  position: relative; /* 20201127 김소라 추가 */
+    font-size: 20px;
+    background: #a1a1a1;
+    color: #000;
+    vertical-align: middle;
+    padding: 15px 0px 16px 20px;
+    width: 125px;
+    min-width: 125px;
+}
+/*20201130 박소희 추가*/
+.input-list  .q-input-title{
+  width:343px;
+  min-width:343px;
+  background-color: #575757;
+}
+/*20201130 박소희 추가 끝*/
+.input-list .input-title i {
+  display: inline-block;
+  vertical-align: 0;
+  font-size: 20px;
+  color: #ff0000;
+  font-style: normal;
+  margin: 0 10px 0 5px;
+}
+.input-text {
+  vertical-align: middle;
+  width: 100%;
+}
+/*20201126 박소희 추가*/
+.input-text input::placeholder{
+  font-size:14px;
+  font-weight:500;
+}
+/*20201126 박소희 추가 끝*/
+.grid3 .input-text {
+  padding-right:10px;
+}
+.grid3 .input-list:last-child .input-text {
+  padding-right: 0;
+}
+.input-text .list-input {
+    background: #000;
+    width: 100%;
+    height: 47px;
+    font-size: 17px;
+    color: #fff;
+    padding: 0 15px;
+    font-family: 'nanumsquare';
+    font-weight: 300;
+    box-sizing: border-box;
+    border-radius: 0;
+    outline-style: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+.input-text input[type="password"] {
+  font-family: inherit;
+}
+.input-text .list-input:focus {
+  border:2px solid #fff;
+}
+.input-text .list-input:not(:placeholder-shown) {
+  border:2px solid #fff;
+}
+.gray-line {
+  border: 2px solid #a1a1a1;
+  min-height: 51px;
+}
+/*20201130박소희 추가*/
+.darkgray-line{
+  border: 1px solid #575757;
+  min-height: 51px;
+}
+/*20201130 박소희 추가 끝*/
+.etc-input {
+  display: inline-block;
+}
+.etc-input input[type=text] {
+  width: 90%;
+    display: inline-block;
+    vertical-align: middle;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+    font-family: 'nanumsquare';
+    font-size: 17px;
+    padding:0 5px;
+}
+
+.input-list.pw-complete .input-title {
+  width: 185px;
+  min-width: 185px;
+}
+.input-list.pw-complete .input-text {
+  width: 66%;
+}
+.input-list.belong .input-title {
+  width: 85px;
+}
+
+.gray-box .text {
+	color:#fff;
+	font-family: 'nanumsquare';
+	font-size: 16px;
+	padding: 25px 20px 0;
+}
+.gray-box .text li {
+	position: relative;
+    padding-left: 25px;
+    line-height: 1.3;
+    font-weight: 300;
+    margin: 0 0 15px;
+}
+.gray-box .text li strong {
+	font-weight: normal;
+}
+.gray-box .text li strong:before {
+	content: '■';
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.agree {
+	border: 1px solid #fff;
+    margin: 0 8px 8px;
+}
+.agree .md-check > i {
+	margin-left: 10px;
+}
+/* 20201127 김소라 삭제
+.gray-btn {
+	cursor: default;
+}
+*/
+
+.gray-box {
+  margin: 5px 0 10px;
+  border: 2px solid #a1a1a1;
+}
+.gray-bg {
+  background: #a1a1a1;
+  color: #000;
+  font-size: 20px;
+  padding: 15px 0px 16px 18px;
+}
+/*20201130 박소희 추가*/
+.gray-bg span{
+  display: inline-block;
+  font-size:20px;
+}
+.gray-bg span i{
+    display: inline-block;
+    vertical-align: 0;
+    font-size: 20px;
+    color: #ff0000;
+    font-style: normal;
+    margin: 0 10px 0 5px;
+}
+/*20201130 박소희 추가 끝*/ 
+/*20201202 박소희 추가*/
+.gray-bg span.desc{
+  display:block;
+  font-size:20px;
+  color:#fff;
+}
+/*20201202 박소희 추가 끝*/
+.gray-box textarea {
+    width: 100%;
+    background: #000;
+    color: #a1a1a1;
+    font-family: 'nanumsquare';
+    font-size: 17px;
+    border: 0;
+    padding: 25px 20px;
+    resize: none;
+    box-sizing: border-box;
+    height: 135px;
+}
+.gray-box textarea:focus {
+  color: #fff;
+  outline: none;
+}
+
+/* 20201127 김소라 추가 */
+.grid2 .input-list {
+  display: inline-block;
+  width: 33.3334%;
+  box-sizing: border-box;
+  vertical-align: top;
+  max-width: inherit;
+}
+.grid2 .input-text {
+    padding-right: 10px;
+}
+.grid2 .agreeCell {
+  width: 66.6667%;
+}
+.grid2 .agreeCell .input-text {
+  padding-right: 0;
+}
+.grid2 .agreeCell .input-title {
+  min-width: 450px;
+  width: 450px;
+  padding: 0;/*20201202 박소희 추가*/
+  padding-left: 20px;/*20201202 박소희 추가*/
+}
+.input-title span {
+  display: inline-block;
+}
+
+.funnel .input-list .input-title {
+  min-width: 265px;
+  width: 265px;
+}
+/***********************/
+
+
+
+
+@media (max-width:1280px) {
+  .input-list .input-title {
+  	font-size: 18px;
+  }
+  /* 20201127 김소라 추가 */
+  .grid2 .agreeCell .input-title {
+    min-width: 410px;
+    width: 410px;
+  }
+  .funnel .input-list .input-title {
+    min-width: 245px;
+    width: 245px;
+  }
+  /***********************/
+}
+@media (max-width:1024px) {
+	.grid3 {
+		display: inline;
+	}
+  /* 20201127 김소라 삭제 
+	.grid3 .input-list {
+		width: 50%;
+	}
+	.form .grid3:first-child .input-list:nth-child(2) .input-text {
+		padding-right: 0;
+	}
+	.form .grid3:first-child .input-list:last-child .input-text {
+		padding-right: 10px;
+	}
+	.form .grid3 + .grid3 .input-list:nth-child(1) .input-text {
+		padding-right: 0;
+	}
+	.form .grid3 + .grid3 .input-list:nth-child(3) .input-text {
+		padding-right: 0;
+	}
+  */
+  /* 20201127 김소라 추가 */
+  .grid2 .input-list {
+    width: 100%;
+  }
+  .grid2 .agreeCell .input-title {
+    min-width: 365px;
+    width: 365px;
+  }
+  .grid3 .input-list {
+    width: 100%;
+  }
+  .input-text {
+    padding:0!important;
+  }
+  .funnel .input-list .input-title {
+    min-width: 215px;
+    width: 215px;
+  }
+  .md-radio {
+    font-size: 15px;
+  }
+  /***********************/
+	.input-list .input-title {
+	    font-size: 16px;
+	    padding: 15px 0px 16px 15px;
+  }
+  /*20201202 박소희 추가*/
+  .gray-bg span.desc{
+    font-size:16px;
+  }
+  /*20201202 박소희 추가 끝*/
+	.input-list.pw-complete .input-title {
+	    width: auto;
+	    min-width: 145px;
+	}
+	.input-list.pw-complete .input-text {
+	    width: 75%;
+	}
+	.md-check {
+		font-size: 15px;
+	}
+	.gray-bg {
+		font-size: 16px;
+  }
+  .top-tab li.register-list,.btn-area a{width:100% !important;}
+}
+@media (max-width:768px) {
+  /* 20201127 김소라 추가 */
+  .grid2 .agreeCell .input-title {
+    min-width: 210px;
+    width: 210px;
+  }
+  .input-title span {
+    display: block;
+  }
+  .grid2 .agreeCell .gray-line {
+    padding: 9px 0;
+  }
+  .grid2 .agreeCell .input-title i {
+    position: absolute;
+    right: 5px;
+    top: 35%;
+  }
+  .funnel .input-list .input-title {
+    min-width: 125px;
+    width: 125px;
+  }
+  .funnel .input-list .input-title i {
+    position: absolute;
+    right: 0;
+    top: 40%;
+  }
+  /***********************/
+}
+@media (max-width:640px) {
+	.grid3 .input-list {
+		width: 100%;
+	}
+	.grid3 .input-text {
+		padding-right: 0!important;
+	}
+	.input-list.pw-complete .input-text {
+	    width: 100%;
+	}
+	.input-list .input-title {
+		min-width: 145px;
+  }
+  /*20201126 박소희 추가*/
+  .input-text input::placeholder{
+    font-size:12px;
+    font-weight:500;
+  }
+  /*20201126 박소희 추가 끝*/
+
+  /* 20201127 김소라 추가 */
+  .funnel .input-list .input-title {
+    min-width: 145px;
+    width: 145px;
+  }
+  /***********************/
+}
+@media (max-width:480px) {
+	.md-check {
+		display: block;
+  }
+  /*20201126 박소희 추가*/
+  .input-text input::placeholder{
+    font-size:10px;
+    font-weight:500;
+  }
+  /*20201126 박소희 추가 끝*/
+  .input-list .input-title {
+		min-width: 112px;
+  }
+  /* 20201127 김소라 추가 */
+  .funnel .input-list .input-title {
+    min-width: 112px;
+    width: 112px;
+  }
+  .grid2 .agreeCell .input-title {
+    min-width: 200px;
+    width: 200px;
+  }
+  /***********************/
+}
+  /*20201126 박소희 추가*/
+@media (max-width:420px) {
+  .input-text input::placeholder{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+}
+  /*20201126 박소희 추가 끝*/
+@media (max-width:380px) {
+}

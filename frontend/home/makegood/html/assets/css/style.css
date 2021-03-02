@@ -1,0 +1,905 @@
+@charset "utf-8";
+
+body,
+html {
+  height: 100%;
+}
+
+body {
+  min-width: 320px;
+  background: #000;
+}
+
+#container {
+  position: relative;
+  padding: 90px 15px 2%;
+  max-width: 1590px;
+  margin: 0 auto;
+  min-height: 875px;
+}
+ /*20201130 박소희 추가*/
+.register_on_container{
+  max-width:1024px !important;
+}
+ /*20201130 박소희 추가 끝*/
+.inner {
+  position: relative;
+  width: 100%;
+}
+#header {
+  background: #a1a1a1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+#header .inner {
+  height: 35px;
+  max-width: 1580px;
+  margin:0 auto;
+}
+#onair_bg #header .inner,
+#onair_bg #footer {
+  background: #000; 
+}
+.logo {
+  position: absolute;
+  z-index: 9;
+  margin: 0 0 0 10px;
+  top: 0;
+}
+.logo a {
+  width: 80px;
+  background: url(/assets/images/layout/top_logo.png) no-repeat center 0;
+  background-size: 80px auto;
+  display: block;
+  padding-top: 40px;
+}
+#header .gnb {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 9;
+}
+#header .gnb > ul > li {
+  float: left;
+}
+#header .gnb > ul > li > a {
+  display: inline-block;
+  vertical-align: middle;
+  color: #000;
+  font-size: 20px;
+  height: 35px;
+  line-height: 35px;
+  padding: 0 20px;
+}
+#header .gnb > ul > li > a:hover {
+  background: #000;
+  color: #54fe54;
+}
+#header .gnb > ul > li.on > a {
+  background: #000;
+  color: #54fe54;
+}
+#header .gnb > ul > li > .logout-btn {
+  display: none;
+}
+#header .gnb .lnb {
+  display: none;
+  position: absolute;
+  width:100%;
+  top: 35px;
+  padding-top: 10px;
+}
+#header .gnb .lnb:after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 140px;
+  background: #fff;
+  position: absolute;
+  top: 22px;
+  z-index: -1;
+  left: 12px;
+}
+#header .gnb .lnb .inner {
+  height: auto;
+  background: #000;
+  border: 1px solid #fff;
+  font-size: 0;
+  padding: 25px 10px;
+}
+#header .gnb .lnb .inner > div {
+  display: inline-block;
+  vertical-align: top;
+}
+#header .gnb .lnb .inner .lnb1 {
+  margin-right: 5px;
+}
+#header .gnb .lnb .inner .lnb4 {
+  margin-right: 140px;
+}
+#header .gnb .lnb .inner > div ul li {
+  line-height: 1.7;
+}
+#header .gnb .lnb .inner > div a {
+  color: #fff;
+  font-size: 17px;
+  font-family: "nanumsquare";
+  padding: 3px 15px 3px 10px;
+  display: inline;
+  transform: skew(-0.001deg);
+}
+#header .gnb .lnb .inner > div a:hover {
+  background: #fff;
+  color: #000;
+}
+
+
+
+
+.menu {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.menu .state {
+  display: inline-block;
+  vertical-align: 2px;
+  margin-right: 10px;
+}
+.menu .state a {
+  font-size: 18px;
+  color: #fff;
+  font-family: "nanumsquare";
+}
+.menu .state a.logout-btn {
+  display: none;
+}
+.menu > a {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  width: 30px;
+  height: 30px;
+}
+.menu > a > span {
+  position: absolute;
+  display: block;
+  width: 27px;
+  height: 3px;
+  background: #fff;
+}
+.menu > a > span:nth-child(1) {
+  top: 0;
+}
+.menu > a > span:nth-child(2) {
+  top: 9px;
+}
+.menu > a > span:nth-child(3) {
+  top: 18px;
+}
+
+.pop-bg {
+  position: fixed;
+  background: #000;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  opacity: 0.6;
+  z-index:999;
+  display: none;
+}
+.scroll-func {
+  width: 100%;
+  padding: 45px 10% 0;
+  height: 100%;
+  border-left: 2px solid #fff;
+  border-right: 2px solid #fff;
+  overflow-y: scroll;
+}
+.side-wrap {
+  display: none;
+  width: 70%;
+  position: fixed;
+  right: -110%;
+  top:0;
+  z-index: 999;
+  height: 100%;
+  background: #000;
+}
+
+.side-wrap .depth > ul > li {
+  line-height: 1.2;
+  margin: 15px 0;
+}
+.side-wrap .depth > ul > li > a {
+  color: #54fe54;
+  font-size: 22px;
+  line-height: 1.4;
+  margin-bottom: 10px;
+  word-break: keep-all;
+}
+.side-wrap .depth .depth2 {
+  padding-left: 20px;
+}
+.side-wrap .depth .depth2 li a {
+  color: #fff;
+  font-size: 18px;
+  font-family: "nanumsquare";
+  margin: 5px 0;
+}
+.side-wrap .depth p {
+  background: url(/assets/images/layout/m_menu_star_line.png)no-repeat;
+  background-size: 100%;
+  margin-top: 35px;
+  margin-bottom: 50px;
+  height: 10px;
+}
+
+.black-bg {
+  position: fixed;
+  background: #000;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  opacity: 0.6;
+  z-index: 100;
+  display: none;
+}
+
+.side-close {
+  position: absolute;
+  top: 30px;
+  right: 20px;
+  z-index: 1;
+}
+
+#footer {
+  background: #070707;
+  color: #999; /* 20201127 김소라 수정 */
+  padding: 30px 0;
+}
+#footer .inner {
+  max-width: 1580px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+#footer .title {
+  font-family: "nanumsquare";
+  transform: skew(-0.001deg);
+  font-size: 17px;
+}
+#footer .title a {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 20px;/*20201201 박소희 추가*/
+}
+#footer .info {
+  font-family: "nanumsquare";
+  transform: skew(-0.001deg);
+  font-size: 17px;
+  margin: 15px 0 10px;
+  font-weight: 400;
+}
+#footer .m-info {
+  display: none;
+  font-family: "nanumsquare";
+  transform: skew(-0.001deg);
+  margin: 15px 0 10px;
+  line-height: 1.5;
+  font-size: 16px;
+}
+#footer .copyright p {
+  display: inline-block;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+
+.md-check {
+  cursor: pointer;
+  padding-left: 5px;
+  margin: 14px 0px 12px 15px;
+  display: inline-block;
+  position: relative;
+  font-size: 17px;
+  font-family: 'nanumsquare';
+  color: #fff;
+}
+.md-check input[type=checkbox] {
+  position: absolute;
+  cursor: pointer;
+  z-index: 1;
+  opacity: 0;
+}
+/* 20201127 김소라 수정 */
+.md-radio {
+    cursor: pointer;
+    padding-left: 5px;
+    margin: 14px 0px 12px 15px;
+    display: inline-block;
+    position: relative;
+    font-size: 17px;
+    font-family: 'nanumsquare';
+    color: #fff;
+}
+.md-radio input[type=radio] {
+  position: absolute;
+  cursor: pointer;
+  z-index: 1;
+  opacity: 0;
+}
+.md-radio > i {
+  width: 20px;
+  height: 20px;
+  line-height: 1;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  left: -5px;
+  top: -1px;
+}
+.md-radio > i:before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #a1a1a1;
+  box-sizing: border-box;
+}
+.md-radio input[type="radio"]:checked + i:before {
+  border: 2px solid #fff;
+}
+.md-radio input[type="radio"]:checked + i:after {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  display: block;
+  width: 8px;
+  height: 8px;
+  content: " ";
+  background: #fff;
+  border: 1px solid #fff;
+}
+/********************/
+.md-check > i {
+  width: 20px;
+  height: 20px;
+  line-height: 1;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  left: -5px;
+  top: -1px;
+}
+.md-check > i:before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #a1a1a1;
+  box-sizing: border-box;
+}
+.md-check input[type="checkbox"]:checked + i:before {
+  border: 2px solid #fff;
+}
+.md-check input[type="checkbox"]:checked + i:after {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  display: block;
+  width: 8px;
+  height: 8px;
+  content: " ";
+  background: #fff;
+  border: 1px solid #fff;
+}
+/*.top-bn {
+  /*position: relative;
+  width:99%;
+  background: #fff;
+  text-transform: uppercase;
+  padding: 10px 15px 70px;*/
+/*20201126 박소희 삭제*/
+.title-top {
+  margin: 0 auto;
+  max-width: 1580px;
+}
+
+.title-top-bn{
+  position: relative;
+  width: 99%;
+  background: #000;/*20201126 박소희 수정 기존 화이트*/
+  text-transform: uppercase;
+  padding: 10px 15px 70px;
+  background-image: url('/assets/images/program/top_banner_img_wh.png');/*20201126 박소희 수정 기존 top_banner_img.png*/ 
+  background-repeat: no-repeat;
+  background-position: 15px 20px;
+  padding-left: 45px;
+  height: 220px;
+  border:2px solid #54fe54;/*20201126 박소희 추가*/ /* 20201126 수정 */
+}
+.title-top-bn:after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #54fe54;
+}
+/*0201126 모바일 버전으로 이미지 추가*/
+.mob-top-img{
+  display:none;
+}
+/*---------------------*/
+.title-top-bn h2 {
+  position: relative;
+  z-index: 1;
+  line-height: 60px;
+  font-size: 85px;
+  font-weight: 400;
+  color:#fff;;/*20201126 박소희 추가*/
+}
+.title-top-bn h2 em{
+  display: inline;
+  color: #54fe54;
+}
+.title-top-bn p {
+  margin-top: 5px;
+  position: relative;
+  z-index: 1;
+  font-size: 25px;
+  line-height: 1.3;
+  color:#fff;/*20201126 박소희 추가*/
+}
+.title-top-bn p .sub {
+  font-size: 20px;
+}
+/* 20201126 수정 */
+.title-top-bn .bg {
+  z-index: 0;
+    position: absolute;
+    top: 30px;
+    right: 10px;
+    display: block;
+    width: auto;
+    height: 160px;
+    width: 50%;
+  background:url("/assets/images/layout/top_banner_bg.png")no-repeat;
+  background-size: 100%;
+}
+.program-top-bn-img {
+  /*
+  z-index: 0;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: block; 
+  width: auto; 
+  height: calc(100% - 20px);
+  */
+  display: block;
+  margin: 0 auto;
+  height: 100%;
+}
+/*****************/
+.top-tab {
+  position: relative;
+  margin-top: 40px;
+  font-size: 0;
+}
+.top-tab:after {
+  content: '';
+  display: block;
+  background: #54fe54;
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+}
+.top-tab li {
+  display: inline-block;
+  font-size: 20px; /*20201130 박소희 추가*/
+  width: 200px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  margin-right: 15px;
+  background:#acacac;/*20201201 박소희 추가*/
+}
+ /*20201130 박소희 추가*/
+.top-tab-register:after{
+  background: #fff !important;
+  color:#000 !important
+}
+.top-tab li.full-btn{
+  width:100%;
+}
+.top-tab li.full-btn a{
+    background: #fff !important;
+    color:#000 !important
+}
+.top-tab:after
+ /*20201130 박소희 추가 끝*/
+.top-tab li a {
+  font-size: 20px;
+  background: #acacac;
+  text-transform: uppercase;
+  color:#000 !important
+}
+.top-tab li.active a {
+  background: #54fe54;
+}
+
+.green-box {
+  position: relative;
+  background: #54fe54;
+  text-transform: uppercase;
+  font-size: 25px;
+  display: inline-block;
+  padding: 28px 50px;
+}
+.green-box:after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: #fff;
+  z-index: -1;
+  top: 7px;
+  left: 7px;
+}
+
+.short-title {
+  background: #54fe54;
+  font-size: 20px;
+  width: 200px;
+  height: 40px;
+  line-height: 40px;
+  padding-left: 15px;
+}
+.video-box {
+  width:1280px;
+  margin: 30px auto;
+}
+.video-wrap {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.55%;
+  margin-top: 20px;
+}
+.video-wrap iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+
+
+.btn-area {
+  margin-top: 20px;
+}
+.btn-area a {
+  display: block;
+  width: 200px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  font-size: 20px;
+  font-family: 'nanumsquare';
+  font-weight: bold;
+}
+.gray-btn {
+  background: #a1a1a1;
+}
+.green-btn {
+  background: #54fe54;
+}
+
+
+#contents {
+  margin-top: 30px;
+}
+ /*20201130 박소희 추가*/
+ .register p{font-size:18px; padding: 2% 0; font-family:"nanumsquare";color:#fff;}
+ .register span{font-size:18px; padding: 2% 0; line-height: 1.6; font-family:"nanumsquare";font-weight: 300;color:#fff;}
+ .register span em{display:inline-block; font-weight:600;color:#ff0000;}
+ .user-id-box{margin:2% 0; padding:3%;font-size:18px;font-family:"nanumsquare";color:#fff; text-align:center;border:1px solid #c7c7c7;}
+ .btn-area-register a{width:100%; font-weight:300;font-family:"DungGeunMo";background: #54fe54;}
+ /*20201130 박소희 추가 끝*/ 
+@media (max-width: 1560px) {
+  .inner {
+    width: 100%;
+  }
+  #header .gnb .lnb {
+    left: -20px;
+  }
+  #header .gnb .lnb .inner .lnb1 {
+    margin-left: 20px;
+  }
+}
+
+@media (max-width: 1280px) {
+  #header .gnb > ul > li > a {
+    font-size: 15px;
+  }
+  #footer .info {
+    font-size: 16px;
+  }
+  #header .gnb .lnb .inner > div a {
+    font-size: 14px;
+  }
+  #header .gnb .lnb .inner .lnb4 {
+    margin-right: 95px;
+  }
+  #header .gnb .lnb .inner .lnb1 {
+    margin-left: 15px;
+  }
+  #header .gnb .lnb:after {
+    height: 120px;
+  }
+  .top-bn {
+    padding: 10px 15px 55px;
+  }
+  .top-bn:after {
+    height: 130px;
+  }
+  .top-bn h2 {
+    font-size: 40px;
+  }
+  .top-bn p {
+    font-size: 20px;
+  }
+  .video-box {
+    width:100%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .program-top-bn-img {
+    display: none;
+  }
+  /*0201126 모바일 버전으로 이미지 추가*/
+  /* 20201126 */
+  .title-top-bn .bg {
+    display: none;
+  }
+  .mob-top-img{
+    display:block;
+    width:100%;
+    max-width: 1024px;
+    margin-top: 30px;
+    background: url(/assets/images/layout/top_banner_bg.png)no-repeat;
+    background-size: 100%;
+  }
+  .mob-top-img img.mob-program-top-bn-img{
+    width: 45%;
+    margin: 0 auto;
+  }
+  /**************/
+  /*---------------------*/
+  #header {
+    background: #000;
+    padding: 30px 15px 15px;
+    height: 100px;
+  }
+  #header .gnb {
+    display: none;
+  }
+  .logo {
+    margin:0;
+  }
+  .logo a {
+    width: 135px;
+    background:url("/assets/images/layout/m_logo.png")no-repeat;
+    padding-top: 55px;
+  }
+  .menu {
+    display: block;
+  }
+  #container {
+    padding: 110px 15px 2%;
+    min-height: auto;
+  }
+  #footer .info {
+    display: none;
+  }
+  #footer .m-info {
+    display: block;
+  }
+  #footer .copyright p {
+    display: block;
+    margin: 5px 0;
+  }
+  .green-box {
+    font-size: 18px;
+    padding: 15px 20px;
+    width: 99.5%;
+  }
+  .green-box:after {
+    top: 4px;
+    left: 4px;
+  }
+}
+
+/*(모바일) */
+@media (max-width: 768px) {
+  /*20201126 박소희 추가*/
+  .title-top-bn {
+    height: 150px;/*20201127 박소희 수정 기존 145px*/
+    background-position: 15px 15px;
+  }
+  .title-top-bn h2 {
+    font-size: 56px; 
+    line-height: 42px;
+  }
+  .title-top-bn p {
+    font-size: 16px;
+  }
+  .title-top-bn p .sub {
+    font-size: 14px;
+  }
+  /*20201126 박소희 추가 끝*/
+  .respon-table {
+    margin-top: 0;
+  }
+  .respon-table th {
+    display: none;
+  }
+  .respon-table tr {
+    position: relative;
+    display: block;
+    margin-top: 25px;
+  }
+  .respon-table tbody tr.text {
+    width: 100%;
+    border-top: 1px solid #dfdfdf;
+  }
+  .respon-table thead tr {
+    display: none;
+  }
+  .respon-table tbody tr:first-child {
+    margin-top: 0;
+  }
+  .respon-table td {
+    position: relative;
+    display: block;
+    text-align: left;
+    padding-left: 110px;
+    border-bottom: 1px solid #f1f1f1;
+  }
+  .respon-table td .data-th {
+    font-weight: bold;
+    width: 95px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #f6f7fc;
+    display: block;
+    padding: 0 10px;
+    min-height: 30px;
+  }
+  .respon-table td .pl110 {
+    padding: 0 0 0 110px;
+  }
+  .respon-table td .data-th span {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .respon-table td div {
+    display: inline-block;
+  }
+  .respon-table td.subject {
+    padding: 10px 0 10px 110px;
+  }
+
+  .top-bn {
+    padding: 6px 0;
+    background: url(/assets/images/layout/m_main_star_line.png)repeat-x;
+  }
+  .top-bn:after {
+    display: none;
+  }
+  .top-bn h2 {
+    display: none;
+  }
+  .top-bn p {
+    display: none;
+  }
+  .top-tab {
+    margin-top: 10px;
+  }
+  .top-tab:after {
+    width:99.8%;
+  }
+  .top-tab.grid2 li {
+    width: calc(50% - 3px);
+    margin-right: 5px;
+  }
+  /*20201126 박소희 추가*/
+  .top-tab.grid2.tab-3 li{
+    width: calc(33.1% - 3px);
+    margin-right: 5px;
+  }
+  .top-tab.grid2.tab-3 li:last-child{
+    margin-right: 0;
+  }
+  .top-tab.grid2.tab-3 li a{
+    overflow:hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;  
+  }
+  /*20201126 박소희 추가 끝*/
+  .top-tab.grid2 li:last-child {
+    margin-right: 0;
+  }
+  .top-tab li {
+    height: 50px;
+    line-height: 50px;
+  }
+  .top-tab li a {
+    font-size: 18px;
+  }
+  .short-title {
+    width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+}
+@media (max-width: 480px) {
+  #footer .m-info {
+    font-size: 14px;
+  }
+  #footer .title {
+    font-size: 14px;
+  }
+    /*20201201 박소희 추가*/
+  #footer .title a{
+    margin:5px;
+  }
+  /*20201201 박소희 추가 끝*/
+  #footer .title img {
+    width:89%;
+  }
+
+  .side-wrap .depth > ul > li > a {
+    font-size: 20px;
+  }
+}
+@media (max-width: 380px) {
+  #footer .m-info {
+    font-size: 12px;
+  }
+  #footer .copyright p {
+    font-size: 14px;
+  }
+  .side-wrap .depth > ul > li > a {
+    font-size: 17px;
+  }
+  .side-wrap .depth .depth2 li a {
+    font-size: 15px;
+  }
+}
+
+@media only screen and (max-width: 980px) and  (orientation:landscape){
+  
+}

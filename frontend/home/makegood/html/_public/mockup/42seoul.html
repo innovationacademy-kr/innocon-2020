@@ -1,0 +1,79 @@
+<!--HEAD
+    {
+        "title": "이노베이션"
+        ,"meta": [
+            {"property": "og:description",  "content":"이노베이션"}
+        ]
+    }
+HEAD-->
+<link rel="stylesheet" type="text/css" href="/assets/css/42seoul.css" />
+
+{% include 'client/kr/components/header.html' %}
+{% include 'client/kr/components/drawer-menu.html' %}
+
+<div id="container">
+    <div class="title-top">
+        <div class="title-top-bn">
+            <h2>2020<br>inno-<em>con</em></h2>
+            <p>2020이노베이션아카데미컨퍼런스<br><span class="sub">: CHANGE THE WORLD WITH SOFTWARE</span></p>
+            <div class="bg"><img src="/assets/images/introduce/top_banner_img_06.svg" alt="이노베이션 아카데미 소개" class="program-top-bn-img"></div> <!-- 20201126 수정 -->
+        </div>
+    </div>
+    <!--20201126 모바일 버전으로 이미지 추가-->
+    <div class="mob-top-img">
+        <img src="/assets/images/introduce/top_banner_img_06.svg" alt="이노베이션 아카데미 소개" class="mob-program-top-bn-img">
+    </div>
+    <!--20201126 모바일 버전으로 이미지 추가 끝-->
+    <ul class="top-tab grid2 tab-3"><!--20201126 클래스 추가-->
+        <li><a href="introduce">아카데미 소개</a></li>
+        <li class="active"><a href="42seoul">42 SEOUL 지원하기</a></li>
+        <li><a href="promotion">홍보영상</a></li>
+    </ul>
+
+    <div id="contents">
+        <div class="innocon02">
+            <!-- 42 seoul 컨텐츠 -->
+            <div class="video-content">
+                <div class="title">
+                    <h3>42 SEOUL?</h3>
+                </div>
+                <div class="video-box video-right">
+                    <div class="video-wrap">
+                        <iframe src="https://www.youtube.com/embed/2gE07GStEIk" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="content-desc">
+                <h4>새로운 소프트웨어 교육 프로그램, 42 SEOUL</h4>
+                <p>
+                    42 SEOUL은 가르치는 교수도, 정해진 교재도, 비싼 학비도 없습니다. 심지어 학위도 없습니다.<br>
+                    <br><br>
+                    42 SEOUL은 단순 지식을 가르치는 곳이 아닙니다. 소프트웨어에 대한 경험을 나누는 방법, 멋진 동료와 협업하는 방법,<br>
+                    누군가를 위해 본인의 경험을 공유하는 방법을 배웁니다. 그리고 배우는 방법을 배웁니다.<br>
+                    <br><br>
+                    최괴의 소프트웨어 개발자로 성장할 수 있는 곳, 최고의 동료와 함께 성장할 수 있는 곳, 바로 42 SEOUL입니다.
+                </p>
+            </div>
+            <div class="btn-area">
+                <a class="white-btn" href="https://42seoul.kr/studies">'42 SEOUL이란?' 상세 알아보기</a>
+            </div>
+            <!-- 지원 프로세스 컨텐츠 -->
+            <div class="process-content">
+                <div class="title">
+                    <h3>지원 프로세스</h3>
+                </div>
+                <div class="btn-area process-btn">
+                    <div class="btn-box">
+                        <a href="https://42seoul.kr/admission" class="white-btn" type="button">지원방법안내</a>
+                        <a href="https://42seoul.kr/apply" class="color-btn" type="button">지원 바로가기</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    includeHTML(function () {
+        $("#header .gnb > ul > li:eq(4)").addClass("on");
+    });
+</script>

@@ -1,0 +1,26 @@
+<!--HEAD
+    {
+        "title": "기초정보 관리"
+    }
+HEAD-->
+{% include 'components/admin/header.html' ignore missing %}
+<main class="container-fluid py-1">
+    <h1 class="h3">기초정보 관리</h1>
+    <form method="post">
+        {% for row in body.rows %}
+        <div class="form-group row">
+            <label class="col-md-2 col-form-label">{{row.label}}</label>
+            <!-- <label class="col-md-1 col-form-label">ko</label> -->
+            <div class="col-md-5">
+                <input type="text" class="form-control" name="{{row.code}}[ko]" value="{{row.ko}}">
+            </div>
+            <!-- <label class="col-md-1 col-form-label">en</label>
+            <div class="col-md-5">
+                <input type="text" class="form-control" name="{{row.code}}[en]" value="{{row.en}}">
+            </div> -->
+        </div>
+        {% endfor %}
+        <button type="submit" class="btn btn-primary btn-lg">저장</button>
+    </form>
+</main>
+{% include 'components/admin/footer.html' ignore missing %}

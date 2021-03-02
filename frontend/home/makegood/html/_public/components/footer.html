@@ -1,0 +1,47 @@
+<!-- Page Footer-->
+<footer class="section footer-classic bg-gray-850">
+	<div class="container">
+		<h2 class="text-uppercase text-white text-center wow fadeInUp" data-wow-delay=".2s">견적문의</h2>
+		{% include 'components/contact_us.html' ignore missing %}
+		<div class="row justify-content-center">
+			<div class="col-lg-6">
+				<ul>
+					{% for idx in ['ceo','addr','business_id','tel','fax','contact_us','telemarketing','bank_info']%}
+						<li>
+							<b>{{env[idx].label}}</b>
+							{{env[idx].ko}}
+						</li>
+						<li>
+						{% endfor %}
+						<li>
+							Copyright
+							<span class="copyright-year"></span>
+							{{env.site.ko}}
+							All rights reserved.
+						</li>
+						{% if user %}
+							<li>
+								<a href="/admin">{{user.uid}}</a>
+							</li>
+						{% endif %}
+
+					</ul>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<style>
+		footer ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+		footer ul li {
+			display: inline-block;
+			padding-left : 10px;
+		}
+		footer ul li b::after {
+			content: ':';
+			margin-right: 0.5em;
+		}
+	</style>

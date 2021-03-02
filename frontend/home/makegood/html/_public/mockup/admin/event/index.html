@@ -1,0 +1,97 @@
+<!--HEAD
+    {
+        "title": "목록 - 이벤트등록정보"
+    }
+HEAD-->
+{% include 'components/admin/header.html' ignore missing %}
+<main class="container-fluid py-1">
+    <h1 class="h3">
+        이벤트등록정보
+        <small>
+            <a href="/admin/event/excel" class="btn btn-sm btn-danger"><b>Excel Download</b> <span class="small">[last 7 days]</span></a>
+            <a href="/admin/event/excel/{{ "now"|date("Y-m-d") }}" class="btn btn-sm btn-danger"><b>Excel Download</b>
+                <span class="small">[Today]</span></a>
+        </small>
+    </h1>
+    <!-- <form method="get" class="form-inline">
+        <input class="form-control mr-2 mb-2" type="text" name="infomation[company]" placeholder="업체명"
+            value="{{body.get.infomation.company}}">
+        <input class="form-control mr-2 mb-2" type="text" name="infomation[name]" placeholder="담당자"
+            value="{{body.get.infomation.name}}">
+        <input class="form-control mr-2 mb-2" type="text" name="infomation[phone]]" placeholder="연락처"
+            value="{{body.get.infomation.phone}}">
+        <input class="form-control mr-2 mb-2" type="text" name="infomation[email]" placeholder="이메일"
+            value="{{body.get.infomation.email}}">
+        <div class="form-check form-check-inline mr-2 mb-2">
+            <input class="form-check-input" type="radio" id="hidden" name="hidden" value="Y"
+                {% if body.get.hidden == 'Y' %} checked {% endif %}>
+            <label class="form-check-label mr-2" for="hidden">숨김</label>
+
+            <input class="form-check-input" type="radio" id="show" name="hidden" value="N"
+                {% if body.get.hidden != 'Y' %} checked {% endif %}>
+            <label class="form-check-label" for="show">보임</label>
+        </div>
+        <select name="infomation[status]" class="form-control mr-2 mb-2">
+            <option value="">전체</option>
+            {% for v in ['접수','검토','답변'] %}
+            <option {% if v == body.get.infomation.status %}selected{% endif %}>{{v}}</option>
+            {% endfor %}
+        </select>
+        <button class="btn btn-danger mr-2 mb-2" type="submit">검색</button>
+        <a class="btn btn-info mr-2 mb-2" href="/admin/enquiry">초기화</a>
+        <a href="/admin/enquiry/regist" class="btn btn-primary mr-2 mb-2">등록</a>
+    </form> -->
+    <div class="table-responsive-lg">
+        <table class="table table-striped text-center small">
+            <thead class="thead-dark">
+                <tr>
+                    <th>#</th>
+                    <th>닉네임</th>
+                    <th>메일주소</th>
+                    <th>내용</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in body.rows %}
+                {% if row.hidden == 'Y' %}
+                <tr class="bg-info">
+                    {% else %}
+                <tr>
+                    {% endif %}
+                    <td class="visible-lg">{{row.idx}}</td>
+                    <td>{{row.nick}}</td>
+                    <td>{{row.email}}</td>
+                    <!-- <td><a href="/admin/pre_registration/read?id={{row.id}}">{{row.email}}</a></td> -->
+                    <td class="text-left">{{row.comment|nl2br}}</td>
+                    <td>
+                        <buton type='button' class='btn btn-danger btn-sm' data-id="{{row.id}}">삭제</buton>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    {% include 'components/paging.html' ignore missing %}
+</main>
+{% include 'components/admin/footer.html' ignore missing %}
+<script src="/script/event/remove"></script>
+<script>
+    var btn = document.querySelectorAll('table .btn');
+    for (i = 0; i < btn.length; i++) {
+        btn[i].addEventListener('click', function () {
+            if (confirm('삭제하시겠습니까?')) {
+                _event.remove({ id: this.getAttribute('data-id') }, [], function (t, body) {
+                    window.location.reload();
+                });
+            }
+        });
+    }
+</script>
+<style>
+    main td,
+    main th {
+        white-space: nowrap;
+        vertical-align: middle !important;
+    }
+</style>

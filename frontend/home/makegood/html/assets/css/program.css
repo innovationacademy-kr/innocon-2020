@@ -1,0 +1,795 @@
+@charset "utf-8";
+
+/* 프로그램 탑 (기본) */
+body#main #container{
+  min-height:100%;
+  overflow: hidden;
+}
+.program-top {
+  margin: 0 auto;
+  max-width: 1580px;
+}
+
+.program-top-bn {
+  position: relative;
+  width: 99%;
+  background: #000;/*20201126 박소희 수정 기존 화이트*/
+  text-transform: uppercase;
+  padding: 10px 15px 70px;
+  background-image: url('../images/program/top_banner_img_wh.png');/*20201126 박소희 수정 기존 top_banner_img.png*/ 
+  background-repeat: no-repeat;
+  background-position: 15px 20px;
+  padding-left: 45px;
+  height: 220px;
+  border:2px solid #fff;/*20201126 박소희 추가*/
+}
+
+.program-top-bn:after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #54fe54;
+}
+/*0201126 모바일 버전으로 이미지 추가*/
+.mob-top-img{
+  display:none;
+}
+/*---------------------*/
+.program-top-bn h2 {
+  position: relative;
+  z-index: 1;
+  line-height: 60px;
+  font-size: 85px;
+  font-weight: 400;
+  color:#fff;;/*20201126 박소희 추가*/
+}
+
+.program-top-bn h2 em {
+  display: inline;
+  color: #54fe54;
+}
+
+.program-top-bn p {
+  margin-top: 5px;
+  position: relative;
+  z-index: 1;
+  font-size: 25px;
+  line-height: 1.3;
+  color:#fff;;/*20201126 박소희 추가*/
+}
+
+.program-top-bn p .sub {
+  font-size: 20px;
+}
+
+/* 20201126 삭제 */
+/*
+.program-top-bn-img {
+  z-index: 0;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: block; 
+  width: auto; 
+  height: calc(100% - 20px);
+}
+*/
+
+.program-top-info {
+  margin: 40px auto;
+  max-width: 1580px;
+  padding-right: 1%;
+  box-sizing: border-box;
+}
+
+.program-top-info-inner {
+  padding: 20px;
+  border: 1px solid #eee;
+  position: relative;
+}
+
+.program-top-info-inner .table {
+	display: inline-block;
+}
+.program-top-info-inner .table .cell {
+	padding: 5px 0;
+	vertical-align: 0px;
+}
+.program-top-info-inner .table .title {
+	font-size: 25px;
+	color: #54fe54;
+	padding-right: 15px;
+}
+.program-top-info-inner .table .cont {
+	font-size: 20px;
+	color: #fff;
+	font-family: 'nanumsquare';
+}
+.program-top-info-inner .table .cont span {
+	display: inline-block;
+	font-family: 'DungGeunMo';
+}
+.program-top-live-button {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  display: block;
+  width: 220px;
+  background-color: red;
+  color: #fff;
+  font-size: 25px;
+  line-height: 30px;
+  padding: 30px 25px;
+}
+.program-top-live-popup,
+.program01-outlink-popup,
+.program02-speaker-popup {
+  display: none;
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0; 
+  right: 0;
+  bottom: 0;
+}
+.program-top-live-popup.on,
+.program01-outlink-popup.on,
+.program02-speaker-popup.on {
+  display: block;
+}
+.dim {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0; 
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.7);
+}
+.program-top-live-popup-inner,
+.program01-outlink-popup-inner {
+  position: fixed;
+  top: 50%;
+  left: 50%; 
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 250px;/*201126 수정 기존 500px*/
+  background-color: #fff;
+  box-sizing: border-box;
+  padding: 50px;
+  text-align: center;
+  font-size: 30px;
+  color: #000;
+  white-space: normal;/*201126 추가*/
+}
+.program-top-live-popup-inner button,
+.program01-outlink-popup-inner button {
+  width: 200px;
+  height: 50px;
+  line-height: 50px;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: inline-block;
+  /*padding: 0 20px;
+  line-height: 50px;*//*201126 삭제*/
+  font-size: 20px;/*201126 수정 기존 30px*/
+  font-family: 'nanumsquare';/*201126 추가*/
+  font-weight: bold;/*201126 추가*/
+  color: #000;
+  background-color: #54fe54;
+}
+
+.program01 h3 {
+  font-size: 0; 
+  height: 0; 
+  color: transparent;
+}
+.program01-top {
+  font-size: 0;
+  white-space: nowrap;
+}
+.program01-top button {
+  vertical-align: top;
+  display: inline-block;
+  width: 50%;
+  font-size: 20px;
+  line-height: 40px;
+  height: 40px;
+  background-color: #acacac;
+  box-sizing: border-box;
+  font-family: 'DungGeunMo';/*20201126 박소희 추가*/
+}
+.program01-top button.on {
+  position: relative;
+  background-color: #fff;
+}
+.program01-top button.on::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  border: 3px solid #54fe54;
+}
+.program-desc{
+  margin: 20px 0;
+  font-size: 18px;
+  font-family: 'NanumSquare';
+  color:#fff;
+}
+
+ul[class^="program01-schedule-"] {
+  display: none;
+  padding: 20px;
+  border-left: 1px solid #acacac;
+  border-right: 1px solid #acacac;
+  border-bottom: 1px solid #acacac;
+}
+ul[class^="program01-schedule-"].on {
+  display: block;
+}
+ul[class^="program01-schedule-"] li {
+  position: relative;
+  padding: 20px 200px 20px 190px;
+  min-height: 132px;
+  border-left: 1px solid #acacac;
+  border-right: 1px solid #acacac;
+  border-bottom: 1px solid #acacac;
+}
+ul[class^="program01-schedule-"] li:first-child {
+  border-top: 1px solid #acacac;
+}
+ul[class^="program01-schedule-"] li .program01-time {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: inline-block;
+  width: 150px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 20px;
+  color: #000;
+  background-color: #fff;;
+}
+ul[class^="program01-schedule-"] li .program01-text {
+  font-family: 'nanumsquare'
+}
+ul[class^="program01-schedule-"] li .program01-text h4 {
+  line-height: 1.3;
+  font-size: 26px;
+  color: #fff;
+}
+/*20201202 박소희 추가*/
+ul[class^="program01-schedule-"] li .program-sub-title{
+  line-height: 1.3;
+  margin-top: 20px;
+  font-size: 18px;
+  color: #fff;
+}
+/*20201202 박소희 추가 끝*/
+ul[class^="program01-schedule-"] li .program01-text h4 em {
+  display: inline; 
+  color: red;
+}
+/*모바일 버전 서브텍스트 숨김*/
+ul[class^="program01-schedule-"] li .mob-program01-subtext {
+  margin-top: 10px;
+  line-height: 1.4;
+  font-size: 16px;
+  color: #fff;
+}
+ul[class^="program01-schedule-"] li .mob-program01-subtext em {
+  display: inline; 
+  font-weight: bold;
+}
+.mob-program01-subtext{display:none;}
+/*모바일 버전 서브텍스트 숨김 끝*/
+ul[class^="program01-schedule-"] li .program01-subtext {
+  margin-top: 10px;
+  line-height: 1.4;
+  font-size: 16px;
+  color: #fff;
+}
+ul[class^="program01-schedule-"] li .program01-subtext em {
+  display: inline; 
+  font-weight: bold;
+}
+ul[class^="program01-schedule-"] li .program01-outlink {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 180px;
+}
+ul[class^="program01-schedule-"] li .program01-outlink a {
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  background-color: #fff;
+  margin-top: 10px;
+  text-align: center;
+  font-size: 14px;
+}
+ul[class^="program01-schedule-"] li .program01-outlink a:first-child {
+  margin-top: 0;
+}
+ul[class^="program01-schedule-"] li .program01-outlink a img {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+.program02 h3 {
+  padding: 0 30px;/*20201202 박소희 수정*/
+  font-size: 35px;
+  height:80px;
+  line-height:80px;/*20201202 박소희 수정*/
+  background-color: #fff;
+}
+ul.program02-speaker {
+  margin-top: 20px;
+  font-size: 0;
+  white-space: nowrap;
+  width: calc(100% + 40px);
+  position: relative;
+  /*left: -20px;*/
+}
+
+ul.program02-speaker li {
+  position:relative;
+  vertical-align: top;
+  width: 31.5%;
+  box-sizing: border-box;
+  margin-right:20px;
+  margin-bottom: 20px;
+  float:left;
+}
+ul.program02-speaker li:nth-child(3),
+ul.program02-speaker li:nth-child(6),
+ul.program02-speaker li:nth-child(9),
+ul.program02-speaker li:nth-child(12){
+  margin-right:0;
+} 
+ul.program02-speaker li:after{
+  content:'';
+  display: block;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #212121;
+}
+ul.program02-speaker li:first-child {
+  margin-left: 0;
+}
+ul.program02-speaker li a {
+  background-color: #acacac;
+  padding: 10px;
+}
+ul.program02-speaker li a > .speaker-title{
+  padding:10px;
+  /*height: 40px;
+  line-height: 40px;*/
+  background-color: #000;
+  margin-bottom: 10px;
+}
+ul.program02-speaker li a > .speaker-title h4 {
+  display: inline-block;
+  font-size: 20px;
+  font-weight: 300;
+  color: #fff;
+  text-transform: uppercase;
+}
+ul.program02-speaker li a > .speaker-title em{
+  display: inline-block;
+  margin-left:10px;
+  font-size: 16px;
+  font-weight: 300;
+  color: #acacac;
+  font-family: 'NanumSquare';
+}
+ul.program02-speaker li a:hover .program02-speaker-image img,
+ul.program02-speaker li a:focus .program02-speaker-image img {
+  opacity: 0.4;
+}
+ul.program02-speaker li a:hover .program02-speaker-des,
+ul.program02-speaker li a:focus .program02-speaker-des {
+  display: block;
+}
+.program02-speaker-des {
+  display: none;
+  position: absolute;
+  bottom: 30px;
+  left: 20px;
+  right: 20px;
+}
+.program02-speaker-des h4 {
+  text-transform: uppercase;
+  font-size: 35px;
+  font-weight: 300;
+  color: #fff;
+}
+.program02-speaker-des em {
+  margin-top: 10px;
+  font-family: 'nanumsquare';
+  font-size: 20px;
+  color: #acacac;
+}
+.program02-speaker-des em #speaker-link{
+  display:block !important;
+  font-family: 'nanumsquare';
+  font-size: 20px;
+  color: #acacac;
+}
+ul.program02-speaker li a .program02-speaker-image {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding-top: 125%;
+  overflow: hidden;
+  background-color: #000;
+  border: 2px solid #000;
+}
+ul.program02-speaker li a .program02-speaker-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.program02-speaker-popup-inner {
+  position: fixed;
+  top: 50%;
+  left: 50%; 
+  transform: translate(-50%, -50%);
+  max-width: 1580px;
+  width: 90%;
+  height: 700px;
+  background-color: #000;
+  box-sizing: border-box;
+  padding: 20px 20px 20px 485px;
+  text-align: center;
+  font-size: 30px;
+  color: #fff;
+  border: 1px solid #acacac;
+}
+.program02-popup-image {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: block;
+  width: 445px;
+  padding-top: 558px;
+  overflow: hidden;
+  background-color: #000;
+}
+.program02-popup-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.program02-speaker-popup-inner > h4 {
+  font-size: 50px;
+  text-transform: uppercase;
+  background-color: #acacac;
+  color: #000;
+  padding: 0 10px;
+  margin-right: 70px;
+  line-height: 60px;
+  text-align: left;
+}
+.program02-popup-des {
+  margin-top: 20px;
+  border: 1px solid #acacac;
+  text-align: left;
+  padding: 20px;
+  font-size: 24px;
+  color: #54fe54;
+}
+.program02-popup-des a.speaker-link{
+  margin-top: 20px;
+  border: 1px solid #acacac;
+  text-align: left;
+  padding: 20px;
+  font-size: 24px;
+  color: #54fe54;
+}
+.program02-popup-des > em {
+  margin-bottom: 5px;
+  font-size: 20px;
+}
+.program02-popup-text {
+  margin-top: 20px;
+  border: 1px solid #acacac;
+  text-align: left;
+  padding: 20px;
+  white-space: normal;
+  max-height: 365px;
+  overflow-y: scroll;
+  font-size: 16px;
+  line-height: 1.3;
+  font-family: 'nanumsquare';
+}
+.program02-speaker-popup button {
+  display: block;
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #acacac;
+}
+.program02-speaker-popup button img {
+  display: block;
+  margin: 0 auto;
+}
+/*20201201 박소희 추가*/
+.program-list{
+  display:block;
+  overflow:hidden;
+  margin-bottom: 40px;
+}
+/*20201201 박소희 추가 끝*/
+@media (max-width: 1520px) {
+  ul.program02-speaker li a > .speaker-title h4{
+    display:block;
+  }
+  ul.program02-speaker li a > .speaker-title em{
+    display:block;
+    margin-left:0;
+    margin-top: 10px;
+  }
+}
+@media (max-width: 1340px) {
+  ul.program02-speaker li{
+    width:31%;
+  }
+  /*20201202 박소희 추가*/
+  .program02 h3{
+    height:auto;
+    min-height:auto;
+    line-height: 1.5;
+  }
+  /*20201202 박소희 추가 끝*/
+}
+/* 프로그램 탑 (태블릿) */
+@media (max-width: 1024px) {
+  .program-top-bn-img {
+    display: none;
+  }
+/*0201126 모바일 버전으로 이미지 추가*/
+  .mob-top-img{
+    display:block;
+    width:100%;
+    max-width: 1024px;
+    margin-top: 30px;
+}
+/* 20201126 삭제 */
+/*
+.mob-top-img img.mob-program-top-bn-img{
+  max-width:100%;
+  height:auto;
+  width: 100%;
+}
+*/
+/*---------------------*/
+  .program-top-live-button {
+    position: relative;
+    top: 0;
+    right: 0;
+  }
+  .program-top-live-button {
+    margin-top: 10px;
+    width: 100%;
+    padding: 20px 10px;
+    text-align: center;
+  }
+  ul.program02-speaker {
+    left: -5px;
+    width: calc(100% + 10px);
+    white-space: normal;
+  }
+  ul.program02-speaker li {
+    width: 48%;
+    padding: 5px;
+  }
+  ul.program02-speaker li:nth-child(3),
+  ul.program02-speaker li:nth-child(6),
+  ul.program02-speaker li:nth-child(9),
+  ul.program02-speaker li:nth-child(12){
+    margin-right: 20px;
+  } 
+  ul.program02-speaker li:nth-child(2),
+  ul.program02-speaker li:nth-child(4),
+  ul.program02-speaker li:nth-child(6),
+  ul.program02-speaker li:nth-child(8){
+    margin-right:0;
+  } 
+  /*ul.program02-speaker li a > h4 {
+    font-size: 11px;
+    line-height: 20px;
+    height: 20px;
+  }*/
+  ul.program02-speaker li a:hover .program02-speaker-image img,
+  ul.program02-speaker li a:focus .program02-speaker-image img {
+    opacity: 1;
+  }
+  ul.program02-speaker li a:hover .program02-speaker-des,
+  ul.program02-speaker li a:focus .program02-speaker-des {
+    display: none;
+  }
+  .program02-speaker-popup-inner {
+    padding-left: 20px;
+    height: auto;
+  }
+  .program02-popup-image {
+    top: 70px;
+    width: 100px;
+    padding-top: 140px;
+  }
+  .program02-speaker-popup-inner > h4 {
+    margin-left: 110px;
+    font-size: 16px;
+    line-height: 40px;
+    margin-right: 0;
+    margin-top: 50px;
+  }
+  .program02-popup-des {
+    margin-left: 110px;
+    font-size: 14px;
+    padding: 10px;
+    margin-top: 10px;
+  }
+  .program02-popup-des em {
+    font-size: 11px;
+  }
+  .program02-speaker-popup button {
+    width: 40px;
+    height: 40px;
+  }
+  .program02-speaker-popup button img {
+    width: 50%;
+  }
+  .program02-popup-text {
+    margin-top: 60px;
+    max-height: 250px;
+  }
+  ul[class^="program01-schedule-"] li .program01-subtext {
+    display:none;
+  }
+    /*모바일 버전 서브텍스트 숨김*/
+    .mob-program01-subtext{display:block !important;}
+    /*모바일 버전 서브텍스트 숨김 끝*/
+}
+
+/* 프로그램 탑 (모바일) */
+@media (max-width: 768px) {
+  .program-top-bn {
+    height: 145px; 
+    background-position: 15px 15px;
+  }
+  .program-top-bn h2 {
+    font-size: 56px; 
+    line-height: 42px;
+  }
+  .program-top-bn p {
+    font-size: 16px;
+  }
+  .program-top-bn p .sub {
+    font-size: 14px;
+  }
+  .program-top-live-popup-inner,
+  .program01-outlink-popup-inner,
+  .program02-speaker-popup {
+    width: 80%;
+    height:28%;/*201126 수정 기존 50%*/
+  }
+  /*201126 추가*/
+  .program-top-live-popup-inner button, .program01-outlink-popup-inner button{
+    width:auto;
+    height: auto;
+    padding:0 20%;
+  }
+   /*201126 추가 끝*/
+  ul[class^="program01-schedule-"] li {
+    padding: 20px;
+  }
+  ul[class^="program01-schedule-"] li .program01-time {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  ul[class^="program01-schedule-"] li .program01-outlink {
+    position: relative;
+    top: 0;
+    right: 0;
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    font-size: 0;
+    white-space: nowrap;
+  }
+  ul[class^="program01-schedule-"] li .program01-outlink a {
+    display: inline-block;
+    vertical-align: top;
+    width: 50%;
+    margin-top: 0;
+    margin-left: 5px;
+    font-size: 11px;
+  }
+  ul[class^="program01-schedule-"] li .program01-outlink a:first-child {
+    margin-left: 0;
+  }
+  ul[class^="program01-schedule-"] li .program01-outlink a img {
+    height: 40%;
+    margin-right: 5px;
+  } 
+  /*20201126 박소희 추가*/
+  .program-top-info-inner .table .title{
+    font-size:18px;
+  }
+  .program-top-info-inner .table .cont{
+    font-size:17px;
+  }
+  /*20201126 박소희 추가 끝*/
+
+   /*20201202 박소희 추가*/
+  .program02 h3{
+    font-size:25px;
+    padding: 0 20px;
+  }
+   /*20201202 박소희 추가 끝*/
+}
+
+/* 20201127 김소라 추가 */
+@media (max-width: 768px) {
+  .program-top-live-popup-inner,
+  .program01-outlink-popup-inner,
+  .program02-speaker-popup {
+    height:45%;
+  }
+  ul.program02-speaker li{
+    width:100%;
+  }
+  ul.program02-speaker li:nth-child(3),
+  ul.program02-speaker li:nth-child(6),
+  ul.program02-speaker li:nth-child(9),
+  ul.program02-speaker li:nth-child(12){
+    margin-right:0;
+  } 
+  ul.program02-speaker li:nth-child(2),
+  ul.program02-speaker li:nth-child(4),
+  ul.program02-speaker li:nth-child(6),
+  ul.program02-speaker li:nth-child(8){
+    margin-right:0;
+  }
+}
+/*20201202 박소희 추가*/
+@media (max-width: 380px) {
+  .program02 h3{
+    font-size:23px; 
+  }
+}
+/*20201202 박소희 추가 끝*/
+/***********************/

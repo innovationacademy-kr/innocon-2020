@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head></head>
+
+
+<body>
+    <div style="background: #000; text-align:center; max-width: 640px;">
+        <img src="http://<?php echo $_SERVER['HTTP_HOST']?>/assets/images/register/topBanner.png" style="width: 100%;">
+        <div style="text-align: center;">
+            <a href="http://<?php echo $_SERVER['HTTP_HOST']?>/pre_registration/regist"
+                style="background: #fff;color: #000;display: inline-block;font-size: 20px;text-decoration: none;padding: 1em;">등록신청 완료 안내</a>
+        </div>
+        <p style="font-size: 1.2em; padding: 2% 0; color: #fff;">2020 INNO-CON 참가자 등록 확인 메일</p>
+        <div style="font-size: 1.2em; padding: 2% 4%; line-height: 1.6; font-weight: 300; color: #fff;">
+            <?php echo $infomation['name'];?>님,<br>
+            2020 INNO-CON 에 참가자 등록해주셔서 감사합니다.<br>
+            귀하의 계정이 활성화되었습니다.<br>
+            <em>[2020 INNO-CON 홈페이지]</em> 를 방문하시어<br>
+            이노베이션 아카데미에 대해 알아보고, <br>
+            개발 생태계의 리더들도 라이브로 만나보세요!<br>
+        </div>
+        <div style="margin: 20px 50px; padding: 3%; font-size: 1.2em; color: #fff; text-align: center; border: 1px solid #c7c7c7;">
+            <label> ID :</label>
+            [<?php echo $email;?>]
+        </div>
+        <div style="text-align: center;">
+        <a href="http://<?php echo $_SERVER['HTTP_HOST']?>"
+            style="margin: 20px 50px;display: inline-block; padding: 20px 50px; text-align: center; font-size: 20px; font-weight: 300; background: #54fe54; text-decoration: none; color:#000">이노베이션
+            2020 바로가기
+        </a>
+        </div>
+        <div style="padding: 5% 0 4%; font-size: 1.2em; line-height: 1.6; font-weight: 100; color: #fff; ">
+            2020 INNO-CON 사무국<br>
+            TEL 02-2152-5067 | E-mail : 2020innocon@gmail.com
+        </div>
+    </div>
+    </div>
+
+</body>
+
+</html>

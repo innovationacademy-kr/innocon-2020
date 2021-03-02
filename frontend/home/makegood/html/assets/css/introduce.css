@@ -1,0 +1,500 @@
+/* introduce */
+.title-top-bn {
+	position: relative;
+    width: 99%;
+    background: #000;
+    text-transform: uppercase;
+    padding: 10px 15px 70px;
+    background-image: url(/assets/images/program/top_banner_img_wh.png);
+    background-repeat: no-repeat;
+    background-position: 15px 20px;
+    padding-left: 45px;
+    height: 220px;
+    border: 2px solid #54fe54;
+}
+.title-top-bn h2 {
+	position: relative;
+    z-index: 1;
+    line-height: 60px;
+    font-size: 85px;
+    font-weight: 400;
+    color: #fff;
+}
+.title-top-bn p {
+	margin-top: 5px;
+    position: relative;
+    z-index: 1;
+    font-size: 25px;
+    line-height: 1.3;
+    color: #fff;
+}
+.title-top-bn p .sub {
+	/*font-family: 'nanumsquare';
+	margin-top: 5px;*/
+	font-size: 20px;
+}
+
+.introduce-wrap > div {
+	position: relative;
+	border:1px solid #acacac;
+	background: #000;
+	font-size: 0;
+	padding: 0 10px 13px;
+	margin-bottom: 50px;
+}
+.introduce-wrap > div:after {
+	content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: #acacac;
+    position: absolute;
+    bottom:-10px;
+    right: -10px;
+    z-index: -1;
+}
+.introduce-wrap > div h3 {
+	background: #fff;
+	border:2px solid #acacac;
+	font-size: 30px;
+	font-weight: 400;
+	margin: 7px 0 30px;
+	padding: 5px 10px;
+}
+.introduce-wrap > div h3 span {
+	display: inline-block;
+}
+.introduce-wrap > div h3 span em {
+	display: inline-block;
+    background: #000;
+    color: #00ff00;
+    padding: 0 5px;
+    margin: 0 5px;
+}
+.introduce-wrap > div .thumb {
+	display: inline-block;
+	vertical-align: top;
+	width: 50%;
+	border: 1px solid #acacac;
+}
+.introduce-wrap > div .thumb img {
+	width: 100%;
+}
+.introduce-wrap > div .box {
+	display: inline-block;
+	vertical-align: top;
+	width: 50%;
+	padding-left: 2%;
+}
+.introduce-wrap > div .box > strong {
+	font-size: 30px;
+	color: #00ff00;
+	font-weight: 400;
+}
+.introduce-wrap > div .box .desc {
+	font-size: 20px;
+	color: #fff;
+	font-family: 'nanumsquare';
+	line-height: 1.2;
+	margin-top: 20px;
+}
+.introduce-wrap > div .box .desc em {
+	font-family: 'DungGeunMo';
+	display: inline-block;
+	vertical-align: -1px;
+}
+
+
+.introduce-wrap > div:not(.introduce01) ul li p {
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 10px;
+}
+
+.introduce-wrap ul li {
+	margin-bottom: 23px;
+}
+.introduce-wrap ul li:last-child {
+	margin-bottom: 0;
+}
+.introduce-wrap ul li p {
+	font-size: 16px;
+	font-family: 'nanumsquare';
+	color: #fff;
+}
+
+.introduce01 ul li strong {
+	position: relative;
+	font-size: 25px;
+	color: #00ff00;
+	font-weight: 400;
+	text-transform: uppercase;
+	margin-bottom: 10px;
+}
+.introduce01 ul li strong:before {
+	content: 'C';
+	display: inline-block;
+	vertical-align: -3px;
+	background: #00ff00;
+	color: #000;
+	font-size: 40px;
+	width: 30px;
+	height: 30px;
+    line-height: 27px;
+    text-align: center;
+    margin-right: 3px;
+}
+
+.introduce02 ul {
+	margin-top: 50px;
+}
+.introduce02 ul li {
+	position: relative;
+	margin-bottom: 27px;
+	padding-left: 10px;
+	height: 20px;
+}
+.introduce02 ul li:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	vertical-align: top;
+	width: 5px;
+	height: 30px;
+	background: #00ff00;
+}
+
+
+.introduce03 ul {
+	margin-top: 45px;
+}
+.introduce03 ul li {
+	position: relative;
+	margin-bottom: 7px;
+	padding-left: 10px;
+	height: 20px;
+}
+.introduce03 ul li:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	vertical-align: top;
+	width: 5px;
+	height: 20px;
+	background: #00ff00;
+}
+
+
+.introduce04 h4 {
+	font-size: 20px;
+    color: #fff;
+    font-family: 'nanumsquare';
+    margin-bottom: 25px;
+    line-height: 1.3;
+    margin-left: 10px;
+}
+.introduce04 > div.thumb{
+	padding: 5% 0;
+}
+.introduce04 ul {
+	margin-top: 45px;
+}
+.introduce04 ul li {
+	position: relative;
+	margin-bottom: 11px;
+	padding-left: 10px;
+	height: 20px;
+}
+.introduce04 ul li:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	vertical-align: top;
+	width: 5px;
+	height: 20px;
+	background: #00ff00;
+}
+/*------ 추가 ------*/
+.introduce-top-info{
+	margin: 40px auto;
+	max-width: 1580px;
+	padding-right: 1%;
+	box-sizing: border-box;
+  }
+  
+  .introduce-top-info-inner{
+	padding: 20px;
+	border: 1px solid #eee;
+	position: relative;
+  }
+  
+  .introduce-top-info-inner .table {
+	  display: inline-block;
+  }
+  .introduce-top-info-inner .table .cell {
+	  padding: 5px 0;
+	  vertical-align: 0px;
+  }
+  .introduce-top-info-inner .table .title {
+	  font-size: 35px;
+	  color: #fff;
+	  padding-right: 15px;
+	  font-family:'DungGeunMo';
+	  font-weight: 500;
+  }
+  .introduce-top-info-inner .table .cont {
+	  font-size: 20px;
+	  color: #fff;
+  }
+  .introduce-top-info-inner .table .cont span {
+	  display: inline-block;
+	  font-family: 'nanumsquare';
+  }
+  .mob-home-link{display:none;}
+  .home-link{
+	position: absolute;
+	top: 15px;
+	right: 15px;
+	display: block;
+	width: 284px;
+	background-color: red;
+	color: #fff;
+	font-size: 25px;
+	line-height: 30px;
+	padding: 30px 25px;
+  }
+/*----------------------*/
+@media (max-width:1280px) {
+	.title-top-bn p {
+    	font-size: 27px;
+    	margin-top: 15px;
+    }
+    .title-top-bn p .sub {
+    	font-size: 17px;
+    }
+
+	.introduce01 ul li strong {
+		font-size: 20px;
+	}
+	.introduce01 ul li strong:before {
+		width: 25px;
+		height: 25px;
+		line-height: 24px;
+		font-size: 30px;
+		vertical-align: -2px;
+	}
+	.introduce-wrap > div .box {
+		vertical-align: middle;
+	}
+  	.introduce-wrap > div .box > strong {
+  		font-size: 25px;
+  	}
+  	.introduce-wrap > div .box .desc {
+  		font-size: 18px;
+  	}
+  	.introduce-wrap ul li {
+  		margin-bottom: 10px;
+  	}
+  	.introduce02 ul li {
+	    margin-bottom: 14px;
+	}
+	.introduce-wrap > div .thumb {
+		vertical-align: middle;
+	}
+	.introduce02 ul {
+	    margin-top: 35px;
+	}
+	.introduce03 ul {
+	    margin-top: 20px;
+	}
+}
+@media (max-width:1024px) {
+	.introduce-wrap > div .thumb {
+		display: block;
+		width: 100%;
+	}
+	.introduce-wrap > div .box {
+		display: block;
+		width: 100%;
+		margin-top: 20px;
+	}
+	.introduce-wrap > div h3 {
+		font-size: 23px;
+	}
+	.introduce-wrap ul li {
+		height: auto!important;
+	}
+	.introduce02 ul li:before {
+		height: 100%;
+	}
+	.introduce03 ul li:before {
+		height: 100%;
+	}
+	.introduce04 ul li:before {
+		height: 100%;
+	}
+	.introduce04 h4 {
+		font-size: 17px;
+	}
+	.home-link{
+		display:none;
+		position: relative;
+   		top: 0;
+    	right: 0;
+		margin-top: 10px;
+		width: 100%;
+		padding: 20px 10px;
+		text-align: center;
+	  }
+	  .mob-home-link{
+		display:block;
+		position: relative;
+   		top: 0;
+    	right: 0;
+		margin-top: 10px;
+		width: 100%;
+		padding: 20px 10px;
+		background-color: red;
+    	color: #fff;
+    	font-size: 25px;
+    	line-height: 30px;
+		text-align: center;
+	  }
+}
+@media (max-width:768px) {
+	/*20201127 박소희 추가*/
+	.title-top-bn {
+		height: 150px;/*20201127 박소희 수정 기존 145px*/
+		background-position: 15px 15px;
+	  }
+	  .title-top-bn h2 {
+		font-size: 56px; 
+		line-height: 42px;
+	  }
+	  .title-top-bn p {
+		font-size: 16px;
+		margin-top: 5px;
+	  }
+	  .title-top-bn p .sub {
+		font-size: 14px;
+	  }
+	  .introduce-top-info-inner .table .title{
+		font-size: 25px;
+	  }
+	  .introduce-top-info-inner .table .cont{
+		font-size: 18px;
+	  }
+	  /*20201127 박소희 추가 끝*/
+}
+@media (max-width:640px) {
+	.title-top-bn a {
+		font-size: 14px;
+		padding: 5px;
+		width: 100%;
+		margin-left: 0;
+		margin-top: 15px;
+		text-align: center;
+	}
+	.introduce-wrap > div {
+		padding: 0 10px 20px;
+	}
+	.introduce-wrap > div:after {
+		bottom: -5px;
+		right: -5px;
+	}
+	.introduce-wrap ul li p {
+		font-size: 14px;
+	}
+	.introduce-wrap ul li {
+	    margin-bottom: 15px;
+	}
+	.introduce01 ul li strong {
+	    font-size: 18px;
+	}
+	.introduce01 ul li strong:before {
+		font-size: 27px;
+	}
+	.introduce-wrap > div .box > strong {
+	    font-size: 20px;
+	}
+	.introduce-wrap > div .box .desc {
+	    font-size: 16px;
+	}
+	.introduce04 h4 {
+	    font-size: 15px;
+	}
+	.introduce-wrap > div h3 {
+		margin: 7px 0 15px;
+	}
+}
+@media (max-width:480px) {
+	.title-top-bn {
+		height: auto;
+		padding: 10px 15px 25px 45px;
+	}
+	.introduce-wrap > div h3 {
+	    font-size: 18px;
+	}
+	.title-top-bn p {
+		font-size: 19px;
+	}
+	.title-top-bn p .sub {
+    	font-size: 13px;
+    }
+    .introduce01 ul li strong {
+	    font-size: 16px;
+	}
+	.introduce01 ul li strong:before {
+	    font-size: 23px;
+		width: 20px;
+		height: 20px;
+		line-height: 19px;
+	}
+	.introduce-wrap ul li p {
+	    font-size: 13px;
+	}
+	.introduce-wrap > div .box > strong {
+	    font-size: 16px;
+	}
+	.introduce-wrap > div .box .desc {
+	    font-size: 14px;
+	}
+	.introduce04 h4 {
+	    font-size: 14px;
+	}
+	.introduce-top-info-inner .table .title{
+		font-size: 20px;
+	}
+	.introduce-top-info-inner .table .cont{
+		font-size: 16px;
+	}
+	.tab-3 li a{font-size:13px !important;}
+}
+@media (max-width:392px){
+	.introduce-wrap > div h3{
+		font-size:15px;
+	}
+} 
+@media (max-width:380px) {
+	.title-top-bn p {
+	    font-size: 15px;
+	}
+	.title-top-bn p .sub {
+	    font-size: 12px;
+	}
+	.title-top-bn a {
+    	font-size: 11px;
+	}
+	.tab-3 li a{font-size:12px !important;}
+}
+@media (max-width:350px){
+	.introduce-wrap > div h3{
+		font-size:14px;
+	}
+}

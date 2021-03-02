@@ -1,0 +1,53 @@
+<!--HEAD
+    {
+        "title": "이노베이션"
+        ,"meta": [
+            {"property": "og:description",  "content":"이노베이션"}
+        ]
+    }
+HEAD-->
+<link rel="stylesheet" type="text/css" href="/assets/css/innocon.css" />
+{% include 'client/kr/components/header.html' %}
+{% include 'client/kr/components/drawer-menu.html' %}
+
+<div id="container">
+    <div class="title-top">
+        <div class="title-top-bn">
+            <h2>2020<br>inno-<em>con</em></h2>
+            <p>2020이노베이션아카데미컨퍼런스<br><span class="sub">: CHANGE THE WORLD WITH SOFTWARE</span></p>
+            <div class="bg"><img src="/assets/images/main/top_banner_img_01.svg" alt="2020INNO-CON" class="program-top-bn-img"></div> <!-- 20201126 수정 -->
+        </div>
+    </div>
+    <!--20201126 모바일 버전으로 이미지 추가-->
+    <div class="mob-top-img">
+        <img src="/assets/images/main/top_banner_img_01.svg" alt="2020INNO-CON" class="mob-program-top-bn-img">
+    </div>
+    <!--20201126 모바일 버전으로 이미지 추가 끝-->
+    <ul class="top-tab grid2">
+        <li><a href="innocon">2020 inno-con</a></li>
+        <li class="active"><a href="opening">인사말씀</a></li>
+    </ul>
+
+    <div id="contents">
+        <div class="innocon02">
+            <div class="title-box green-box">
+                <span>2020 이노베이션</span>
+                <span>페이지 준비중입니다.</span>
+            </div>
+
+            <!--<div class="video-box">
+              <div class="short-title">인사말씀</div>
+              <div class="video-wrap">
+                <iframe src="https://www.youtube.com/embed/2gE07GStEIk" frameborder="0" allowfullscreen></iframe>
+              </div>
+              <p>이민석  |  이노베이션 아카데미 학장</p>
+            </div>-->
+        </div>
+    </div>
+</div>
+
+<script>
+    includeHTML(function () {
+        $("#header .gnb > ul > li:eq(0)").addClass("on");
+    });
+</script>

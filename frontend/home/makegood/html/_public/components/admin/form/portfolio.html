@@ -1,0 +1,138 @@
+{% if msg %}
+{% for row in msg %}
+<div class="form-row">
+    <div>{{row}}</div>
+</div>
+{% endfor %}
+{% endif %}
+<div class="form-row">
+    <div class="form-group col-md-12">
+        <label for="title">제목</label>
+        <input type="text" class="form-control" id="title" placeholder="제목" name="title" value="{{body.post.title}}">
+    </div>
+</div>
+<div class="form-row">
+    <div class="form-group col-md-12">
+        <label for="thumb">썸네일</label>
+        <input type="file" class="form-control-file" id="thumb" placeholder="썸네일" name="attachment[thumb][]">
+    </div>
+</div>
+<div class="form-row">
+    <div class="form-group col-md-12">
+        <label for="infomation_client">클라이언트</label>
+        <input type="text" class="form-control" id="infomation_client" placeholder="클라이언트" name="infomation[client]"
+            value="{{body.post.infomation.client}}">
+    </div>
+</div>
+<div class="form-row">
+    <div class="form-group col-md-12 mb-0">
+        <label for="infomation_category">카테고리</label>
+    </div>
+    <div class="form-group col-md-12">
+        {% for v in ['웹','앱','모바일','쇼핑몰','기획','디자인','코딩','개발','브랜딩','로고','상세페이지','사진','영상'] %}
+        <div class="custom-control custom-checkbox mr-5">
+            <input type="checkbox" class="custom-control-input" id="info_cate_{{loop.index}}"
+                name="infomation[category][]" value="{{v}}" {% if v in body.post.infomation.category %} checked
+                {% endif %}>
+            <label class="custom-control-label" for="info_cate_{{loop.index}}">{{v}}</label>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+<div class="form-row">
+    <div class="form-group col-md-12">
+        <label for="infomation_period">작업기간</label>
+        <input type="text" class="form-control" id="infomation_period" placeholder="작업기간" name="infomation[period]"
+            value="{{body.post.infomation.period}}">
+    </div>
+</div>
+<div class="form-row">
+    <div class="form-group col-md-12 mb-0">
+        <label for="infomation_language">개발언어</label>
+    </div>
+    <div class="form-group col-md-12">
+        {% for v in ['JAVA','JavaScript','PHP','C','python','Twitter Bootstrap','jQuery','HTML','CSS'] %}
+        <div class="custom-control custom-checkbox mr-5">
+            <input type="checkbox" class="custom-control-input" id="info_lang_{{loop.index}}"
+                name="infomation[language][]" value="{{v}}" {% if v in body.post.infomation.language %} checked
+                {% endif %}>
+            <label class="custom-control-label" for="info_lang_{{loop.index}}">{{v}}</label>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+<div class="form-row">
+    <div class="form-group col-md-12 mb-0">
+        <label for="infomation_tools">작업툴</label>
+    </div>
+    <div class="form-group col-md-12">
+        {% for v in ['Adobe Photoshop','Adobe Illustrator','Adobe Premiere PRO','Adobe After Effects','MicroSoft Visual Studio Code','EditPlus'] %}
+        <div class="custom-control custom-checkbox mr-5">
+            <input type="checkbox" class="custom-control-input" id="info_tools_{{loop.index}}"
+                name="infomation[tools][]" value="{{v}}" {% if v in body.post.infomation.tools %} checked {% endif %}>
+            <label class="custom-control-label" for="info_tools_{{loop.index}}">{{v}}</label>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+<div class="form-row">
+    <div class="form-group col-md-12 mb-0">
+        <label>기능</label>
+    </div>
+    <div class="form-group col-md-12">
+        {% for v in ['위치기반','예약','채팅','단계별 알고리즘','쇼핑','기타'] %}
+        <div class="custom-control custom-checkbox mr-5">
+            <input type="checkbox" class="custom-control-input" id="info_func_{{loop.index}}" name="infomation[func][]"
+                value="{{v}}" {% if v in body.post.infomation.func %} checked {% endif %}>
+            <label class="custom-control-label" for="info_func_{{loop.index}}">{{v}}</label>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+<div class="form-row">
+    <div class="form-group col-md-12">
+        <label for="infomation_tags">태그</label>
+        <div class="tags form-control">
+            {% if body.post.infomation.tags %}
+            {% for row in body.post.infomation.tags %}
+            <div class="el mr-2">
+                <input type="hidden" name="infomation[tags][]" value="{{row}}">
+                <span class="badge badge-primary" onclick="tag_remove($(this));">
+                    {{row}}
+                    <i class="remove"></i>
+                </span>
+            </div>
+            {% endfor %}
+            {% endif %}
+            <input type="text" data-name="infomation[tags][]" id="infomation_tags" placeholder="태그" autocomplete="off">
+        </div>
+    </div>
+</div>
+<div class="form-row">
+    <div class="form-group col-md-6">
+        <label>URL - PC</label>
+        <input type="text" class="form-control" name="infomation[url_pc]" value="{{body.post.infomation.url_pc}}">
+    </div>
+    <div class="form-group col-md-6">
+        <label>URL - Mobile</label>
+        <input type="text" class="form-control" name="infomation[url_mobile]"
+            value="{{body.post.infomation.url_mobile}}">
+    </div>
+</div>
+<div class="form-row">
+    <div class="form-group col-md-6">
+        <label>App - Android</label>
+        <input type="text" class="form-control" name="infomation[app_android]"
+            value="{{body.post.infomation.app_android}}">
+    </div>
+    <div class="form-group col-md-6">
+        <label>App - IOS</label>
+        <input type="text" class="form-control" name="infomation[app_ios]" value="{{body.post.infomation.app_ios}}">
+    </div>
+</div>
+<div class="form-row">
+    <div class="form-group col-md-12">
+        <label>상세페이지</label>
+        <textarea name="content" class="form-control" rows="20">{{body.post.content}}</textarea>
+    </div>
+</div>

@@ -1,0 +1,338 @@
+/* 2020 INNOCON */
+.title-img img {
+	width: 100%;
+}
+.title-img .m-img {
+	display: none;
+}
+
+.innocon01 {
+	padding: 0 30px;
+	font-size: 0;
+}
+.innocon01 h3 {
+	font-size: 30px;
+	color: #54fe54;
+	font-weight: normal;
+	margin: 35px 0 30px;
+}
+.innocon01 .table {
+	display: inline-block;
+	width:50%;
+}
+.innocon01 .table .cell {
+	padding: 5px 0;
+	vertical-align: 0px;
+}
+.innocon01 .table .title {
+	font-size: 25px;
+	color: #54fe54;
+	padding-right: 15px;
+}
+.innocon01 .table .cont {
+	font-size: 20px;
+	color: #fff;
+	font-family: 'nanumsquare';
+}
+.innocon01 .table .cont span {
+	display: inline-block;
+	font-family: 'DungGeunMo';
+}
+.innocon01 .table.w100 {
+	width: 100%;
+}
+
+
+
+/* 축사/개회사 */
+.innocon02 p {
+	color: #fff;
+	font-family: 'nanumsquare';
+	font-size: 25px;
+	margin-top: 30px;
+	text-align: right;
+}
+.green-box span {
+	display: inline-block;
+}
+/*20201201 박소희 추가*/
+.alliance-top-info{
+	margin: 40px auto;
+    max-width: 1580px;
+    padding-right: 1%;
+    box-sizing: border-box;
+}
+.alliance-top-info-inner{
+	padding: 20px;
+    border: 1px solid #eee;
+    position: relative;
+}
+.alliance-top-info-inner .table{
+	display: inline-block;
+}
+.alliance-top-info-inner .table .title{
+	font-size: 35px;
+    color: #fff;
+	padding-right: 15px;
+    font-family: 'DungGeunMo';
+    font-weight: 500;
+}
+.alliance-top-info-inner.table .cell{
+	padding: 5px 0;
+    vertical-align: 0px;
+}
+.alliance-top-info-inner .table .cont{
+    color: #fff;
+}
+.alliance-top-info-inner .table .cont span.sub{
+	display: inline-block;
+	margin-top:5px;
+	font-size: 20px;
+    font-family: 'nanumsquare';
+}
+.cell-btn{
+	float: right;
+}
+.hire-link,.hire-download-link{
+    width:450px;
+    color: #fff;
+    font-size: 25px;
+	padding:6px;
+	text-align: center;
+}
+.hire-link span,.hire-download-link span{
+	display:inline-block;
+	font-size:16px;
+	vertical-align: baseline;
+	font-family: 'nanumsquare';
+}
+.hire-link{
+	margin-bottom:2%;
+	background-color:#0000ff;
+}
+.hire-download-link{
+	background-color:#ff0000;
+}
+.mob-btn{display:none;}
+.alliance-wrap{
+	display:flex;
+	flex-wrap:wrap;
+	overflow:hidden;
+}
+.alliance-wrap > div{
+	position: relative;
+	width: 32.47%;
+    background: #b2b2b2;
+    font-size: 0;
+	padding:9px;
+	margin-right: 20px;
+	margin-bottom: 20px;
+}
+.alliance-wrap > div:nth-child(3),
+.alliance-wrap > div:nth-child(6),
+.alliance-wrap > div:nth-child(9),
+.alliance-wrap > div:nth-child(12),
+.alliance-wrap > div:nth-child(15),
+.alliance-wrap > div:nth-child(18),
+.alliance-wrap > div:nth-child(21),
+.alliance-wrap > div:nth-child(24),
+.alliance-wrap > div:nth-child(27),
+.alliance-wrap > div:nth-child(30),
+.alliance-wrap > div:nth-child(33),
+.alliance-wrap > div:nth-child(36),
+.alliance-wrap > div:nth-child(39){
+	margin-right:0;
+}
+.alliance-wrap .company-cell{
+
+}
+.company-cell .thumb{
+	display:block;
+	position:relative;
+    vertical-align: top;
+    width: 100%;
+	border:2px solid #000;
+	/*cursor:pointer;*//*201204 5시 이후 삭제*/
+	min-height: 230px;
+    background: #000;
+}
+.company-cell .thumb a{
+	display:block;
+}
+.company-cell .thumb img{
+	max-width:100%;
+	overflow:hidden;
+	margin: auto;
+}
+.company-cell h3{
+	display: block;
+	min-height:50px;
+	background: #000;
+	color: #fff;
+    font-size:20px;
+    font-weight: 400;
+    margin-top:10px;
+    padding:13px;
+}
+.company-cell .in-thumb{
+	width: 100%;
+    height: 100%;
+	position: absolute;
+	left:0;
+	top:0;
+	background:rgba(0.3,0.3,0.3,0.8);
+	display:none;
+}
+.company-cell .in-thumb a{
+	position:absolute;
+	left:50%;
+	top:50%;
+	transform:translate(-50%,-50%);
+	color:#fff;
+	font-size:18px;
+}
+/*기능 영역*/
+.company-cell .thumb:hover .in-thumb{
+	display:block;
+}
+.company-cell .desc-box{
+	display:inline-block;
+	width: 53%;
+}
+.company-cell .desc{
+	display: block;
+    vertical-align: top;
+	padding-left: 2%;
+	margin-bottom: 5px;
+}
+.company-cell .desc .title{
+	position: relative;
+    font-size: 20px;
+    background: #a1a1a1;
+    color: #000;
+    vertical-align: middle;
+    padding: 14px 0px 14px 20px;
+    width: 125px;
+    min-width: 125px;
+}
+.company-cell .desc .text{
+	padding-right: 10px;
+    background: #000;
+    width: 100%;
+    height: 45px;
+    font-size: 17px;
+    color: #fff;
+    border: 2px solid #a1a1a1;
+    min-height: 51px;
+    padding:12px;
+    font-family: 'nanumsquare';
+    font-weight: 300;
+    box-sizing: border-box;
+    border-radius: 0;
+    outline-style: none;
+}
+.company-cell .full-desc{padding-left:0;}
+.desc-full-box{
+	display:block;
+	width:100%;
+}
+/*20201201 박소희 추가 끝*/
+@media (max-width:1560px) {
+	.alliance-wrap > div{
+		width: 32.4%;
+	}
+}
+@media (max-width:1440px) {
+	.alliance-wrap > div{
+		width: 32%;
+	}
+}
+@media (max-width:1280px) {
+  
+}
+@media (max-width:1024px) {
+	.innocon01 {
+		padding: 0;
+	}
+	.innocon01 .table {
+		display: block;
+		width: 100%;
+	}
+	.innocon01 h3 {
+		font-size: 25px;
+	}
+	.innocon01 .table .title {
+		font-size: 22px;
+	}
+	.innocon01 .table .cont {
+		font-size: 18px;
+	}
+	.innocon01 .table .inline-row .cell {
+		display: inline-block;
+	}
+	.green-box span {
+		display: block;
+		margin: 3px 0;
+	}
+	/*20201201 박소희 추가*/
+	.hire-link,.hire-download-link{
+		display:none;
+	}
+	.hire-link{
+		margin-bottom:0;
+	}
+	.mob-btn{
+		display:block;
+		width:100%;
+		margin:2% 0;
+	}
+	.hire-wrap > div{
+		width:100%;
+	}
+	.hire-wrap > div:nth-child(1), .hire-wrap > div:nth-child(3), .hire-wrap > div:nth-child(5), .hire-wrap > div:nth-child(7), .hire-wrap > div:nth-child(9){
+		margin-right:0;
+	}
+	.alliance-wrap{
+		display:block;
+	}
+	.alliance-wrap > div{
+		width:100%;
+	}
+	/*20201201 박소희 추가 끝*/
+}
+@media (max-width:768px) {
+	.title-img .p-img {
+		display: none;
+	}
+	.title-img .m-img {
+		display: block;
+	}
+	.innocon01 h3 {
+		font-size: 25px;
+	    margin: 30px 0 25px;
+	}
+	.innocon01 .table .cell {
+		display: block;
+	}
+	.innocon01 .table .title {
+	    font-size: 18px;
+	}
+	.innocon01 .table .cont {
+		font-size: 17px;
+	}
+}
+@media (max-width:640px) {
+}
+@media (max-width:480px) {
+	.innocon02 p {
+		font-size: 18px;
+	}
+	.company-cell .thumb{
+		min-height:auto;
+	}
+}
+@media (max-width:380px) {
+	.company-cell h3{
+		font-size: 18px;
+	}
+}

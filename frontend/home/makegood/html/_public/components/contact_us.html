@@ -1,0 +1,64 @@
+<form class="rd-form rd-mailform rd-mailform-custom" data-form-output="form-output-global" data-form-type="contact" method="post" action="/enquiry/regist" id="contact">
+	<div class="row row-lg-30">
+		<div class="col-lg-6">
+			<div class="form-wrap">
+				<input class="form-input form-input-2" id="contact-company-3" type="text" name="infomation[company]" data-constraints="@Required">
+				<label class="form-label form-label-2" for="contact-company-3">
+					업체명&nbsp;<span class="text-fourth">*</span>
+				</label>
+			</div>
+		</div>
+		<div class="col-lg-6">
+			<div class="form-wrap">
+				<input class="form-input form-input-2" id="contact-name-3" type="text" name="infomation[name]">
+				<label class="form-label form-label-2" for="contact-name-3">담당자</label>
+			</div>
+		</div>
+		<div class="col-lg-6">
+			<div class="form-wrap">
+				<input class="form-input form-input-2" id="contact-phone-3" type="text" name="infomation[phone]" data-constraints="@Required">
+				<label class="form-label form-label-2" for="contact-phone-3">
+					연락처&nbsp;<span class="text-fourth">*</span>
+				</label>
+			</div>
+		</div>
+		<div class="col-lg-6">
+			<div class="form-wrap">
+				<input class="form-input form-input-2" id="contact-email-3" type="email" name="infomation[email]">
+				<label class="form-label form-label-2" for="contact-email-3">이메일</label>
+			</div>
+		</div>
+		<div class="col-lg-12">
+			<div class="form-wrap category">
+				<label class="form-label form-label-2" for="contact-message-3">상담분야</label>
+				{% for v in ['웹','앱','모바일','쇼핑몰','기획','디자인','코딩','개발','브랜딩','로고','상세페이지','사진','영상'] %}
+					<div class="custom-control custom-checkbox mr-5">
+						<input type="checkbox" class="custom-control-input" id="info_cate_{{loop.index}}" name="infomation[category][]" value="{{v}}" {% if v in body.post.infomation.category %} checked {% endif %}>
+						<label class="custom-control-label" for="info_cate_{{loop.index}}">{{v}}</label>
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+		<div class="col-lg-12">
+			<div class="form-wrap">
+				<label class="form-label form-label-2" for="contact-message-3">상담내용</label>
+				<textarea class="form-input form-input-2" id="contact-message-3" name="content" data-constraints="@Required"></textarea>
+			</div>
+		</div>
+		<div class="col-lg-12 text-center offset-top-30">
+			<button class="button-2 wow fadeInLeft button button-lg button-icon button-icon-left button-secondary button-ujarak" data-wow-delay=".2s" type="submit">
+				<span class="icon mdi mdi-plus"></span>상담신청</button>
+		</div>
+	</div>
+</form>
+
+<style>
+	form.rd-form .custom-control {
+		display: inline-block;
+	}
+	form.rd-form .category .form-label {
+		position: relative;
+		display: block;
+		margin-bottom: 2em;
+	}
+</style>

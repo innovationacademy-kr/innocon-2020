@@ -1,0 +1,47 @@
+<!--HEAD
+    {
+        "title": "이노베이션"
+        ,"meta": [
+            {"property": "og:description",  "content":"이노베이션"}
+        ]
+    }
+HEAD-->
+<link rel="stylesheet" type="text/css" href="/assets/css/program.css" />
+{% include 'client/kr/components/header.html' %}
+{% include 'client/kr/components/drawer-menu.html' %}
+
+<div id="container">
+
+    <!-- TOP (이미지 650x200) -->
+    <div class="program-top">
+        <div class="title-top-bn">
+            <h2>2020<br>inno-<em>con</em></h2>
+            <p>2020이노베이션아카데미컨퍼런스<br><span class="sub">: CHANGE THE WORLD WITH SOFTWARE</span></p>
+            <div class="bg"><img src="/assets/images/program/top_banner_img_05.png" alt="2020INNO-CON" class="program-top-bn-img"></div> <!-- 20201126 수정 -->
+        </div>
+        <!--20201126 모바일 버전으로 이미지 추가-->
+        <div class="mob-top-img">
+            <img src="/assets/images/program/top_banner_img_05.png" alt="프로그램" class="mob-program-top-bn-img">
+        </div>
+        <!--20201126 모바일 버전으로 이미지 추가 끝-->
+    </div>
+    <ul class="top-tab grid2">
+        <li><a href="program">세부프로그램</a></li><!--201126 링크수정-->
+        <li class="active"><a href="speaker">참여인사</a></li>
+    </ul>
+
+    <div id="contents">
+        <div class="innocon02">
+            <div class="title-box green-box">
+                <span>2020 이노베이션</span>
+                <span>페이지 준비중입니다.</span>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    includeHTML(function () {
+        /* 프로그램표시 */
+        $("#header .gnb > ul > li:eq(2)").addClass("on");
+    });
+</script>

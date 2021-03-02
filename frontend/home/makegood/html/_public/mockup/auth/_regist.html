@@ -1,0 +1,60 @@
+<!--HEAD
+    {
+        "title": "가입"
+    }
+HEAD-->
+{% include 'client/kr/components/header.html' %}
+{% include 'client/kr/components/drawer-menu.html' %}
+<div id="container">
+    <div class="title-top">
+        <div class="title-top-bn">
+            <h2>2020<br>inno-<em>con</em></h2>
+            <p>2020이노베이션아카데미컨퍼런스<br><span class="sub">: CHANGE THE WORLD WITH SOFTWARE</span></p>
+            <div class="bg"><img src="/assets/images/event/top_banner_img_04.svg" alt="추후이미지삽입될영역"
+                    class="program-top-bn-img"></div> <!-- 20201126 수정 -->
+        </div>
+    </div>
+    <!--20201126 모바일 버전으로 이미지 추가-->
+    <div class="mob-top-img">
+        <img src="/assets/images/event/top_banner_img_04.svg" alt="추후이미지삽입될영역" class="mob-program-top-bn-img">
+    </div>
+    <!--20201126 모바일 버전으로 이미지 추가 끝-->
+    <!--<ul class="top-tab grid2">
+        <li><a href="innocon.html">2020 innocon</a></li>
+        <li class="active"><a href="opening.html">축사/개회사</a></li>
+    </ul>-->
+
+    <div id="contents">
+            <form method="post">
+                <div class="row mb-2">
+                    <div class="input-text cell">
+                        <input class="input-box" type="text" name="uid" placeholder="아이디" autocomplete="off">
+                    </div>
+                    {% if msg.uid %}
+                    <div class="col-12 text-danger small">{{msg.uid}}</div>
+                    {% endif %}
+                </div>
+                <div class="row mb-2">
+                    <div class="col-12">
+                        <input class="form-control" type="password" name="passwd" placeholder="암호">
+                    </div>
+                    {% if msg.passwd %}
+                    <div class="col-12 text-danger small">{{msg.passwd}}</div>
+                    {% endif %}
+                </div>
+                <div class="row mb-2">
+                    <div class="col-12">
+                        <input class="form-control" type="password" name="passwd_confirm" placeholder="암호확인">
+                    </div>
+                    {% if msg.passwd_confirm %}
+                    <div class="col-12 text-danger small">{{msg.passwd_confirm}}</div>
+                    {% endif %}
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <button class="btn btn-danger btn-block" type="submit">가입</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>

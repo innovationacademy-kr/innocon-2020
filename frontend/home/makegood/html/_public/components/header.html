@@ -1,0 +1,67 @@
+<!-- Page Header-->
+<header class="section page-header">
+    <!-- RD Navbar-->
+    <div class="rd-navbar-wrap">
+        <nav class="rd-navbar rd-navbar-classic" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed"
+            data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static"
+            data-lg-device-layout="rd-navbar-static" data-xl-layout="rd-navbar-static"
+            data-xl-device-layout="rd-navbar-static" data-lg-stick-up-offset="46px" data-xl-stick-up-offset="46px"
+            data-xxl-stick-up-offset="46px" data-lg-stick-up="true" data-xl-stick-up="true" data-xxl-stick-up="true">
+            <div class="rd-navbar-main-outer">
+                <div class="rd-navbar-main">
+                    <!-- RD Navbar Panel-->
+                    <div class="rd-navbar-panel">
+                        <!-- RD Navbar Toggle-->
+                        <button class="rd-navbar-toggle"
+                            data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
+                        <!-- RD Navbar Brand-->
+                        <div class="rd-navbar-brand"><a class="brand" href="/"><img class="brand-logo-dark"
+                                    src="/assets/template/images/logo-default-119x44.png" alt="{{env.site.ko}}" width="119" height="44"
+                                    srcset="/assets/template/images/logo-default-119x44.png 2x" /><img
+                                    class="brand-logo-light" src="/assets/template/images/logo-default-119x44.png"
+                                    alt="{{env.site.ko}}" width="119" height="44"
+                                    srcset="/assets/template/images/logo-default-119x44.png 2x" /></a>
+                        </div>
+                    </div>
+                    <div class="rd-navbar-main-element">
+                        <div class="rd-navbar-nav-wrap">
+                            <ul class="rd-navbar-nav">
+                                <li class="rd-nav-item"><a class="rd-nav-link" href="/">Home</a>
+                                </li>
+                                <li class="rd-nav-item"><a class="rd-nav-link" href="/about">About</a>
+                                </li>
+                                <li class="rd-nav-item"><a class="rd-nav-link" href="/portfolio">Portfolio</a>
+                                    <!-- <ul class="rd-menu rd-navbar-dropdown">
+                                        <li class="rd-dropdown-item"><a class="rd-dropdown-link"
+                                                href="single-portfolio.html">Single Portfolio</a>
+                                        </li>
+                                    </ul> -->
+                                </li>
+                                <li class="rd-nav-item"><a class="rd-nav-link" href="/services">Services</a></li>
+                                <li class="rd-nav-item"><a class="rd-nav-link" href="/enquiry">Contacts</a></li>
+                                <li class="rd-nav-item"><a class="rd-nav-link" href="#">Shopping</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>
+<script>
+    $(function(){
+        $('header .rd-navbar-main-element .rd-navbar-nav a').each(function(){
+            if($(this).attr('href') != '/') {
+                if(window.location.pathname.indexOf($(this).attr('href')) == 0) {
+                    $(this).parents('li').addClass('active');
+                }
+            }
+            else {
+                if (window.location.pathname == $(this).attr('href')) {
+                    $(this).parents('li').addClass('active');
+                }
+            }
+        })
+
+    })
+</script>

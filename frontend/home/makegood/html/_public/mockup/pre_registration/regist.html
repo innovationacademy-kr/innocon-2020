@@ -1,0 +1,254 @@
+<!--HEAD
+    {
+        "title": "컨퍼런스 등록 신청 - 이노베이션"
+        ,"meta": [
+            {"property": "og:description",  "content":"이노베이션"}
+        ]
+    }
+HEAD-->
+<link rel="stylesheet" type="text/css" href="/assets/css/register.css" />
+{% include 'client/kr/components/header.html' %}
+{% include 'client/kr/components/drawer-menu.html' %}
+
+<div id="container">
+    <div class="title-top">
+        <div class="title-top-bn">
+            <h2>2020<br>inno-<em>con</em></h2>
+            <p>2020이노베이션아카데미컨퍼런스<br><span class="sub">: CHANGE THE WORLD WITH SOFTWARE</span></p>
+            <div class="bg"><img src="/assets/images/register/top_banner_img_03.svg" alt="등록"
+                    class="program-top-bn-img">
+            </div> <!-- 20201126 수정 -->
+        </div>
+    </div>
+    <!--20201126 모바일 버전으로 이미지 추가-->
+    <div class="mob-top-img">
+        <img src="/assets/images/register/top_banner_img_03.svg" alt="등록" class="mob-program-top-bn-img">
+    </div>
+    <!--20201126 모바일 버전으로 이미지 추가 끝-->
+
+    <ul class="top-tab grid1">
+        <li class="active register-list"><a href="#">등록신청</a></li>
+        <!--20201127 클래스 추가-->
+    </ul>
+
+    <div id="contents">
+        <!-- register -->
+        <div class="register">
+            <p class="desc1">* 필수항목입니다.</p>
+            <p class="desc2">* 이벤트 활용 목적을 위해 이메일 주소와 휴대폰 번호를 동시에 수집하고 있습니다. <br> &nbsp;&nbsp; 이벤트에 관심이 없으시면 입력하지 않으셔도
+                됩니다 </p><!-- 20201127 김소라 수정 -->
+
+            <form id="registerForm" method="post">
+                <!-- 20201127 김소라 추가 -->
+                {% if status == '400' %}
+                <ul class='error'>
+                    {% for str in msg %}
+                    <li>{{str}}</li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+                <div class="form">
+                    <div class="table grid2">
+                        <!-- 20201127 김소라 수정 -->
+                        <div class="input-list">
+                            <div class="input-title cell">E-mail<i>*</i></div>
+                            <div class="input-text cell"><input type="email" placeholder="&nbsp;"
+                                    class="list-input gray-line" id="email" name="email" value="{{body.form.email}}" required>
+                            </div>
+                        </div>
+                        <!-- 20201127 김소라 수정 -->
+                        <div class="input-list agreeCell">
+                            <div class="input-title cell">이노베이션 아카데미 뉴스레터 수신 동의<i>*</i></div>
+                            <div class="input-text cell">
+                                <div class="gray-line">
+                                    <label class="half md-radio">
+                                        <input type="radio" id="acceptance" name="subscribe" value=1
+                                            {% if form.subscribe == 1 %} checked="checked" {% endif %}>
+                                        <i class="amber"></i> 동의
+                                    </label>
+                                    <label class="half md-radio">
+                                        <input type="radio" id="acceptance" name="subscribe" value=0
+                                            {% if form.subscribe == '0' %} checked="checked" {% endif %}>
+                                        <i class="amber"></i> 비동의
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!------------------------->
+                        <!-- 20201127 김소라 삭제
+                        <div class="input-list pw-complete">
+                            <div class="input-title cell">비밀번호 확인<i>*</i></div>
+                            <div class="input-text cell"><input type="password" placeholder="&nbsp;" class="list-input gray-line"></div>
+                        </div>
+                        -->
+                    </div>
+
+                    <div class="table grid3">
+                        <div class="input-list">
+                            <div class="input-title cell">성명<i>*</i></div>
+                            <div class="input-text cell">
+                                <input type="text" name="infomation[name]" placeholder="&nbsp;"
+                                    value="{{body.form.infomation.name}}" class="list-input gray-line" required>
+                            </div>
+                        </div>
+                        <div class="input-list">
+                            <div class="input-title cell">휴대번호</div>
+                            <div class="input-text cell"><input type="phone" name="infomation[phone]"
+                                    placeholder="&nbsp;(-)를 제외한 휴대번호를 &#13;&#10;입력하여주시기 바랍니다."
+                                    class="list-input gray-line" value="{{body.form.infomation.phone}}"></div>
+                        </div>
+                        <div class="input-list belong">
+                            <div class="input-title cell">소속</div>
+                            <div class="input-text cell"><input type="text" name="infomation[organization]"
+                                    placeholder="&nbsp;" class="list-input gray-line"
+                                    value="{{body.form.infomation.organization}}"></div>
+                        </div>
+                    </div>
+
+                    <div class="table grid1">
+                        <div class="input-list">
+                            <div class="input-title cell">관심분야<i>*</i></div>
+                            <div class="input-text cell">
+                                <div class="gray-line">
+                                    {% for val in ['코딩','S/W개발자','S/W교육','42 SEOUL','새로운 소프트웨어 학습 시스템'] %}
+                                    <label class="half md-check">
+                                        <input type="checkbox" name="interests[label][]" value="{{val}}"
+                                            {% if val in body.form.interests.label %} checked {% endif %} >
+                                        <i class="amber"></i> {{val}} 
+                                    </label>
+                                    {% endfor %}
+                                    <label class="half md-check">
+                                        <input type="checkbox" name="interests[label][]" value="기타"
+                                            {% if '기타' in body.form.interest.label %} checked {% endif %}>
+                                        <i class="amber"></i> 기타
+                                        <span class="etc-input">(<input type="text" name="interests[etc]" />)</span>
+                                        <!-- 20201127 김소라 추가 -->
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="table grid1 funnel">
+                        <!-- 20201127 김소라 수정 -->
+                        <div class="input-list">
+                            <div class="input-title cell">어떻게 알고 오셨어요?<i>*</i></div>
+                            <div class="input-text cell">
+                                <div class="gray-line">
+                                    {% for val in ['이노베이션 아카데미 홈페이지','SNS','유사기관 홈페이지','안내 E-mail 및 초대장','언론매체 기사 및 광고','홍보 포스터','주변 소개'] %}
+                                    <label class="half md-check">
+                                        <input type="checkbox" name="funnel[label][]" value="{{val}}"
+                                            {% if val in body.form.funnel.label %} checked {% endif %} >
+                                        <i class="amber"></i> {{val}}
+                                    </label>
+                                    {% endfor %}
+                                    <label class="half md-check">
+                                        <input type="checkbox" name="funnel[label][]" value="기타"
+                                            {% if '기타' in body.form.funnel.label %} checked {% endif %}>
+                                        <i class="amber"></i> 기타
+                                        <span class="etc-input">(<input type="text" name="funnel[etc]" />)</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gray-box">
+                    <!--20201130 박소희 텍스트-->
+                    <div class="gray-bg">라이브 인터뷰이에게 질문을 남겨주세요!<span class="desc"><i>※</i>질문하고자 하는 연사명과 세션명을 꼭
+                            기입하여주세요!</span></div> <!-- 20201127 김소라 수정 -->
+                    <textarea name="comment" placeholder="라이브 세션에서 인터뷰이가 직접 답변을 드립니다.
+채택된 질문자에게는 이벤트 경품을 드립니다!">{{body.form.comment}}</textarea> <!-- 20201127 김소라 수정 -->
+                </div>
+                <div class="gray-box">
+                    <div class="gray-bg">개인정보 활용 동의서</div>
+                    <ul class="text">
+                        <li>
+                            <strong>개인정보의 수집 및 이용목적</strong>
+                            <p>사무국은 수집한 개인정보를 다음의 목적을 위해 활용합니다. - 서비스 제공에 관한 참가자 DB관리, 이벤트(질문하기,SNS인증, 설문조사) 경품 제공 시 활용
+                            </p>
+                        </li>
+                        <li>
+                            <strong>수집하는 개인정보 항목</strong>
+                            <p>
+                                회사는 회원가입, 상담, 서비스 신청 등을 위해 아래와 같은 개인정보를 수집하고 있습니다.<br>
+                                수집항목 : 이메일, 성명, 휴대번호, 소속, 접속로그, 쿠키, 접속 IP정보 등<br>
+                                개인정보 수집방법 : 홈페이지(http://www.innocon.co.kr) 회원가입
+                            </p>
+                        </li>
+                        <li>
+                            <strong>보유 이용 기간</strong>
+                            <p>
+                                위 개인정보는 수집/이용에 관한 동의일로부터 보유 목적 달성시 또는 정보 주체가 개인정보 삭제를 요청 할 경우 지체 없이 파기 합니다. 단, 행사 참가자의
+                                DB 관리를 위하여 보유/이용되며 보존 기간은 행사 종료일로부터 1년 입니다.
+                            </p>
+                        </li>
+                        <li>
+                            <strong>개인정보 수집 동의 및 위수탁 안내</strong>
+                            <p>
+                                표시된 개인정보 수집 및 이용목적 범위를 초과하여 개인정보를 이용하거나 제 3자에게 제공하지 않습니다.
+                            </p>
+                        </li>
+                    </ul>
+                    <div class="agree">
+                        <label class="half md-check">
+                            위와 같이 귀하의 개인 정보를 수집/이용하는 것에 동의 합니다.
+                            <input type="checkbox" id="agree" name="info_agreement" required>
+                            <i class="amber"></i>
+                        </label>
+                    </div>
+                </div>
+                <div class="btn-area" id="submitBtn">
+                    <button type="submit" class="green-btn">등록신청</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- // register -->
+</div>
+<script src="/script/pre_registration/regist"></script>
+<script>
+    $("#header .gnb > ul > li:eq(1)").addClass("on");
+    // document.querySelector('form').onchange = function () {
+
+    // }
+    window.onload = function(){
+        _pre_registration.form(document.querySelector('form'), function(obj){
+            if (typeof obj.subscribe == 'undefined') {
+                alert('뉴스레터 수신여부를 선택해주세요');
+                document.querySelectorAll('input[name="subscribe"]')[0].focus();
+                return false;
+            }
+            
+            if(typeof obj.interests == 'undefined' || typeof obj.interests.label == 'undefined' || obj.interests.label.length == 0) {
+                alert('관심분야를 입력해주세요');
+                document.querySelectorAll('input[name="interests[label][]"]')[0].focus();
+                return false;
+            }
+            if (typeof obj.funnel == 'undefined' || typeof obj.funnel.label == 'undefined' || obj.funnel.label.length == 0) {
+                alert('유입경로를 입력해주세요');
+                document.querySelectorAll('input[name="funnel[label][]"]')[0].focus();
+                return false;
+            }
+    
+            document.querySelector('form').submit();
+        });
+    }
+</script>
+<style>
+    form button[type="submit"] {
+        display: block;
+        width: 200px;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        font-size: 20px;
+        font-family: 'nanumsquare';
+        font-weight: bold;
+    }
+
+    form ul.error li {
+        color: red;
+    }
+</style>

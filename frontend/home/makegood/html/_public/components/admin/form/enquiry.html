@@ -1,0 +1,69 @@
+{% if msg %}
+{% for row in msg %}
+<div class="form-row">
+    <div>{{row}}</div>
+</div>
+{% endfor %}
+{% endif %}
+<div class="form-row">
+    <div class="form-group col-md-12">
+        <label for="title">업체명</label>
+        <input type="text" class="form-control" id="title" placeholder="업체명" name="infomation[company]"
+            value="{{body.post.infomation.company}}" required autocomplete="off">
+    </div>
+</div>
+<div class="form-row">
+    <div class="form-group col-md-12">
+        <label for="title">담당자</label>
+        <input type="text" class="form-control" id="title" placeholder="담당자" name="infomation[name]"
+            value="{{body.post.infomation.name}}" autocomplete="off">
+    </div>
+</div>
+<div class="form-row">
+    <div class="form-group col-md-12">
+        <label for="title">연락처</label>
+        <input type="text" class="form-control" id="title" placeholder="연락처" name="infomation[phone]"
+            value="{{body.post.infomation.phone}}" required autocomplete="off">
+    </div>
+</div>
+<div class="form-row">
+    <div class="form-group col-md-12">
+        <label for="title">이메일</label>
+        <input type="text" class="form-control" id="title" placeholder="이메일" name="infomation[email]"
+            value="{{body.post.infomation.email}}" autocomplete="off">
+    </div>
+</div>
+<div class="form-row">
+    <div class="form-group col-md-12">
+        <label for="title">제작 예산 및 희망 견적</label>
+        <input type="text" class="form-control" id="title" placeholder="제작 예산 및 희망 견적" name="infomation[budget]"
+            value="{{body.post.infomation.budget}}" autocomplete="off">
+    </div>
+</div>
+<div class="form-row">
+    <div class="form-group col-md-12 mb-0">
+        <label for="infomation_category">견적내용</label>
+    </div>
+    <div class="form-group col-md-12">
+        {% for v in ['웹','앱','모바일','쇼핑몰','기획','디자인','코딩','개발','브랜딩','로고','상세페이지','사진','영상'] %}
+        <div class="custom-control custom-checkbox mr-5">
+            <input type="checkbox" class="custom-control-input" id="info_cate_{{loop.index}}"
+                name="infomation[category][]" value="{{v}}" {% if v in body.post.infomation.category %} checked
+                {% endif %}>
+            <label class="custom-control-label" for="info_cate_{{loop.index}}">{{v}}</label>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+<div class="form-row">
+    <div class="form-group col-md-12">
+        <label>문의내용</label>
+        <textarea name="content" class="form-control" rows="20" required>{{body.post.content}}</textarea>
+    </div>
+</div>
+
+<style>
+    .custom-control {
+        display: inline-block;
+    }
+    </style>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html class="loading" lang="en" data-textdirection="ltr">
+<!-- BEGIN: Head-->
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Inno-con</title>
+    <link rel="apple-touch-icon" href="/assets/images/favicon/apple-touch-icon-152x152.png">
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/images/favicon/favicon-32x32.png">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- BEGIN: VENDOR CSS-->
+    <link rel="stylesheet" type="text/css" href="../assets/css/vendors.min.css">
+    <link rel="stylesheet" type="text/css" href="../assets/lib/data-tables/extensions/responsive/css/responsive.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="../assets/lib/data-tables/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="../assets/lib/data-tables/css/select.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/materialize.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/style_tem.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/data-tables.css">
+    <!-- END: VENDOR CSS-->
+    <!-- BEGIN: Page Level CSS-->
+    <!-- END: Page Level CSS-->
+    <!-- BEGIN: Custom CSS-->
+    <link rel="stylesheet" type="text/css" href="../assets/css/custom.css">
+    <!-- END: Custom CSS-->
+
+    <!-- BEGIN CORE PLUGINS -->
+    <!--[if lt IE 9]>
+    <script src="../assets/js/jquery-1.10.2.min.js"></script>
+    <![endif]-->
+        <!--[if gte IE 9]>
+    <script src="../assets/js/jquery-2.1.4.min.js"></script>
+    <![endif]-->
+    <!--[if !IE]> -->
+    <script src="../assets/js/search.js"></script>
+    <script src="../assets/js/vendors.min.js"></script>
+    <script src="../assets/js/jquery-1.8.2.js"></script>
+    <script src="../assets/js/jquery-2.1.4.min.js"></script>
+    <!-- BEGIN VENDOR JS-->
+    <!-- BEGIN PAGE VENDOR JS-->
+    <script src="../assets/lib/data-tables/js/jquery.dataTables.min.js"></script>
+    <script src="../assets/lib/data-tables/extensions/responsive/js/dataTables.responsive.js"></script>
+    <script src="../assets/lib/data-tables/js/dataTables.select.min.js"></script>
+    <script src="../assets/lib/jquery.ajax-cross-origin.min.js"></script>
+    <!-- END PAGE VENDOR JS-->
+    <!-- BEGIN THEME  JS-->
+    <!-- BEGIN PAGE LEVEL JS-->
+    <script src="../assets/js/data-tables.js"></script>
+    <!-- END PAGE LEVEL JS-->
+    <!-- <![endif]-->
+</head>
+<!-- END: Head-->
+
+<body class="vertical-layout page-header-light vertical-menu-collapsible vertical-dark-menu preload-transitions 2-columns   " data-open="click" data-menu="vertical-dark-menu" data-col="2-columns">
+
+<!-- BEGIN: SideNav-->
+<aside class="sidenav-main nav-expanded nav-lock nav-collapsible sidenav-dark sidenav-active-rounded">
+    <div class="brand-sidebar">
+        <h1 class="logo-wrapper">
+            <a class="brand-logo darken-1" href="/list">
+                <img class="hide-on-med-and-down " src="/assets/images/layout/top_logo.png" alt="Inno-Con" />
+            </a>
+            <a class="navbar-toggler" id="logoutBtn"><i class="material-icons">exit_to_app</i>
+            </a>
+        </h1>
+    </div>
+    <ul class="sidenav sidenav-collapsible leftside-navigation collapsible sidenav-fixed menu-shadow" id="slide-out" data-menu="menu-navigation" data-collapsible="accordion" style="overflow: scroll;">
+        <li class="bold"><a class="waves-effect waves-cyan " href="/list"><i class="material-icons">person</i><span class="menu-title" data-i18n="User Profile">사전 등록 정보</span></a></li>
+        <li class="bold"><a class="waves-effect waves-cyan " href="/eventList"><i class="material-icons">event</i><span class="menu-title" data-i18n="User Profile">이벤트 등록 정보</span></a></li>
+    </ul>
+    <div class="navigation-background"></div>
+</aside>
+<!-- END: SideNav-->
+
+<!-- BEGIN: Page Main-->
+
+{% block contents %}
+{% endblock %}
+
+<!-- END: Page Main-->
+
+<!-- BEGIN: Footer-->
+
+<footer class="page-footer footer footer-static footer-light navbar-border navbar-shadow">
+    <div class="footer-copyright">
+    </div>
+</footer>
+
+{% block js %}
+    <script src="../assets/script/login.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function() {
+            Login.init();
+        });
+    </script>
+{% endblock %}
+</body>
+
+</html>

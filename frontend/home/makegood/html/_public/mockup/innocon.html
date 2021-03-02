@@ -1,0 +1,83 @@
+<!--HEAD
+    {
+        "title": "이노베이션"
+        ,"meta": [
+            {"property": "og:description",  "content":"이노베이션"}
+        ]
+    }
+HEAD-->
+<link rel="stylesheet" type="text/css" href="/assets/css/innocon.css" />
+{% include 'client/kr/components/header.html' %}
+{% include 'client/kr/components/drawer-menu.html' %}
+
+<div id="container">
+    <div class="title-top">
+        <div class="title-top-bn">
+            <h2>2020<br>inno-<em>con</em></h2>
+            <p>2020이노베이션아카데미컨퍼런스<br><span class="sub">: CHANGE THE WORLD WITH SOFTWARE</span></p>
+            <div class="bg"><img src="/assets/images/main/top_banner_img_01.svg" alt="2020INNO-CON" class="program-top-bn-img"></div> <!-- 20201126 수정 -->
+        </div>
+    </div>
+    <!--20201126 모바일 버전으로 이미지 추가-->
+    <div class="mob-top-img">
+        <img src="/assets/images/main/top_banner_img_01.svg" alt="2020INNO-CON" class="mob-program-top-bn-img">
+    </div>
+    <ul class="top-tab grid2">
+        <li class="active"><a href="innocon">2020 inno-con</a></li>
+        <li><a href="opening">인사말씀</a></li>
+    </ul>
+
+    <div id="contents">
+        <!-- 20201127 김소라 삭제 -->
+        <!--
+        <div class="title-img">
+          <img src="/assets/images/main/2020inno-con_banner.png" class="p-img">
+          <img src="/assets/images/main/m_2020inno-con_banner.png" class="m-img">
+        </div>
+      -->
+
+        <div class="innocon01">
+            <h3>행사개요</h3>
+            <div class="table">
+                <div class="row">
+                    <div class="cell title">행사명</div>
+                    <div class="cell cont">2020 이노베이션 아카데미 컨퍼런스 (2020 INNO-CON)</div>
+                </div>
+                <div class="row">
+                    <div class="cell title">일시</div>
+                    <div class="cell cont">2020년 12월 8일 (화), 10:00-18:00</div>
+                </div>
+                <div class="row">
+                    <div class="cell title">장소</div>
+                    <div class="cell cont">2020 INNO-CON 홈페이지</div> <!-- 20201127 김소라 수정 -->
+                </div>
+            </div>
+            <div class="table">
+                <div class="row">
+                    <div class="cell title">주제</div>
+                    <div class="cell cont">소프트웨어로 세상을 바꾸다<span>_CHANGE THE WORLD WITH SOFTWARE</span></div>
+                </div>
+                <div class="row">
+                    <div class="cell title">참가대상</div>
+                    <div class="cell cont">이노베이션 아카데미에 관심 있는 누구나</div> <!-- 20201127 김소라 수정 -->
+                </div>
+                <div class="row inline-row">
+                    <div class="cell title">주최</div>
+                    <div class="cell cont">재단법인 이노베이션 아카데미</div>
+                </div>
+            </div>
+            <div class="table w100">
+                <div class="row inline-row">
+                    <div class="cell title">공식언어</div>
+                    <div class="cell cont">한국어</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    includeHTML(function () {
+        $("#header .gnb > ul > li:eq(0)").addClass("on");
+    });
+</script>
